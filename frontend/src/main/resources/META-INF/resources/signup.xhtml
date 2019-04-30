@@ -16,8 +16,12 @@
                            rendered="${!empty param['error']}"/>
 
             <h:panelGrid columns="2" layout="grid">
-                <h:outputText value="username"/>
-                <h:inputText id="usernameTextId" value="#{signUpController.email}"/>
+                <h:outputText value="email"/>
+                <h:inputText id="emailTextId" value="#{signUpController.email}"/>
+                <h:outputText value="First name:"/>
+                <h:inputText id="givenNameTextId" value="#{signUpController.givenName}"/>
+                <h:outputText value="Last name:"/>
+                <h:inputText id="familyNameTextId" value="#{signUpController.familyName}"/>
                 <h:outputText value="password"/>
                 <h:inputSecret id="passwordTextId" value="#{signUpController.password}"/>
             </h:panelGrid>

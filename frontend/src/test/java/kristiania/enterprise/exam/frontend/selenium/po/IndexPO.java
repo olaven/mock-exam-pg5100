@@ -27,7 +27,9 @@ public class IndexPO extends LayoutPO {
 
     @Override
     public boolean isOnPage() {
-        return getDriver().getTitle().contains("Welcome");
+
+        String title = getDriver().getTitle();
+        return title.contains("Welcome");
     }
 
     public boolean buttonToPlaceholderVisible() {
@@ -40,10 +42,4 @@ public class IndexPO extends LayoutPO {
             return false;
         }
     }
-
-    public void goToPlaceholderPage() {
-
-        clickAndWait("goToCounterPageButton");
-    }
-
 }

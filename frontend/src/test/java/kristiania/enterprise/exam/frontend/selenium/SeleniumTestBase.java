@@ -2,7 +2,6 @@ package kristiania.enterprise.exam.frontend.selenium;
 
 import kristiania.enterprise.exam.frontend.selenium.po.IndexPO;
 import kristiania.enterprise.exam.frontend.selenium.po.SignUpPO;
-import kristiania.enterprise.exam.frontend.selenium.po.ui.PlaceholderPO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -32,25 +31,18 @@ public abstract class SeleniumTestBase {
 
 
     private IndexPO home;
-    private PlaceholderPO placeholderPO;
 
 
-    private IndexPO createNewUser(String username, String password) {
+    private IndexPO createNewUser(String email, String givenName, String familyName, String password) {
 
         home.toStartingPage();
 
         SignUpPO signUpPO = home.toSignUp();
 
-        IndexPO indexPO = signUpPO.createUser(username, password);
+        IndexPO indexPO = signUpPO.createUser(email, givenName, familyName, password);
         assertNotNull(indexPO);
 
         return indexPO;
-    }
-
-    private void goToPlaceholderPage() {
-
-        createNewUser(getUniqueId(), "password123");
-        home.goToPlaceholderPage();
     }
 
     @BeforeEach
@@ -63,7 +55,6 @@ public abstract class SeleniumTestBase {
         getDriver().manage().deleteAllCookies();
 
         home = new IndexPO(getDriver(), getServerHost(), getServerPort());
-        placeholderPO = new PlaceholderPO(home);
 
         home.toStartingPage();
 
@@ -75,72 +66,30 @@ public abstract class SeleniumTestBase {
 
         assertFalse(home.isLoggedIn());
 
-        String username = getUniqueId();
+        String email = getUniqueId();
+        String givenName = "given test";
+        String familyName = "famiy test";
         String password = "123456789";
-        home = createNewUser(username, password);
+
+        home = createNewUser(email, givenName, familyName, password);
 
         assertTrue(home.isLoggedIn());
-        assertTrue(home.getDriver().getPageSource().contains(username));
+        assertTrue(home.getDriver().getPageSource().contains(email));
 
         home.doLogout();
 
         assertFalse(home.isLoggedIn());
-        assertFalse(home.getDriver().getPageSource().contains(username));
+        assertFalse(home.getDriver().getPageSource().contains(email));
     }
 
     @Test
     public void placeholderButtonVisibleWhenLoggedIn() {
 
         assertFalse(home.buttonToPlaceholderVisible());
-        createNewUser(getUniqueId(), "password");
+        createNewUser(getUniqueId(), "given test", "family test", "password");
         assertTrue(home.buttonToPlaceholderVisible());
     }
 
-    @Test
-    public void canGoToPlachoderPage() {
 
-        goToPlaceholderPage();
-        assertTrue(placeholderPO.isOnPage());
-    }
-
-    @Test
-    public void canAddItem() {
-
-        goToPlaceholderPage();
-
-        int before = placeholderPO.getDisplayedCount();
-        placeholderPO.addNew();
-        int after = placeholderPO.getDisplayedCount();
-
-        assertEquals(before + 1, after);
-    }
-
-    @Test
-    public void canDeleteItem() {
-
-        goToPlaceholderPage();
-
-        placeholderPO.addNew();
-        int before = placeholderPO.getDisplayedCount();
-
-        placeholderPO.delete(0);
-        int after = placeholderPO.getDisplayedCount();
-
-        assertEquals(before - 1, after);
-    }
-
-    @Test
-    public void canIncrement() {
-
-        goToPlaceholderPage();
-
-        placeholderPO.addNew();
-
-        int before = placeholderPO.getCounterOf(0);
-        placeholderPO.increment(0);
-        int after = placeholderPO.getCounterOf(0);
-
-        assertEquals(before + 1, after);
-    }
 
 }
