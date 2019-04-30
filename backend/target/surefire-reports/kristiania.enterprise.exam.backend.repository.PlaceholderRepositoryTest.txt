@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: kristiania.enterprise.exam.backend.repository.PlaceholderRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.792 s - in kristiania.enterprise.exam.backend.repository.PlaceholderRepositoryTest

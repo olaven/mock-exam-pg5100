@@ -1,0 +1,6 @@
+kristiania/enterprise/exam/frontend/controller/UserInfoController.class
+kristiania/enterprise/exam/Application.class
+kristiania/enterprise/exam/frontend/WebSecurityConfig.class
+kristiania/enterprise/exam/frontend/controller/SignUpController.class
+kristiania/enterprise/exam/frontend/RedirectForwardHandler.class
+kristiania/enterprise/exam/frontend/controller/PlaceholderController.class

@@ -1,0 +1,7 @@
+kristiania/enterprise/exam/backend/services/UserService.class
+kristiania/enterprise/exam/backend/repository/PlaceholderRepository.class
+kristiania/enterprise/exam/backend/PasswordConfig.class
+kristiania/enterprise/exam/backend/entity/PlaceholderEntity.class
+kristiania/enterprise/exam/backend/services/DefaultDataInitializer.class
+kristiania/enterprise/exam/backend/services/PlaceholderService.class
+kristiania/enterprise/exam/backend/entity/UserEntity.class

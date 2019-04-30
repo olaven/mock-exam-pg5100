@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+backend,kristiania.enterprise.exam.backend.services,DefaultDataInitializer,3,109,1,3,2,21,1,13,0,12
+backend,kristiania.enterprise.exam.backend.services,PlaceholderService,2,137,3,3,0,29,3,10,0,10
+backend,kristiania.enterprise.exam.backend.services,UserService,0,40,0,2,0,11,0,3,0,2
+backend,kristiania.enterprise.exam.backend.entity,PlaceholderEntity,40,81,6,8,5,24,9,13,3,12
+backend,kristiania.enterprise.exam.backend.entity,UserEntity,12,19,0,0,4,10,4,5,4,5
+backend,kristiania.enterprise.exam.backend,PasswordConfig,0,7,0,0,0,2,0,2,0,2

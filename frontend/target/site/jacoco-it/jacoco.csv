@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+frontend,kristiania.enterprise.exam,Application,5,3,0,0,2,1,1,1,1,1
+frontend,kristiania.enterprise.exam.frontend,RedirectForwardHandler,0,5,0,0,0,2,0,2,0,2
+frontend,kristiania.enterprise.exam.frontend,WebSecurityConfig,12,99,0,0,4,29,0,5,0,5
+frontend,kristiania.enterprise.exam.frontend.controller,PlaceholderController,0,32,0,0,0,10,0,7,0,7
+frontend,kristiania.enterprise.exam.frontend.controller,UserInfoController,0,9,0,0,0,2,0,2,0,2
+frontend,kristiania.enterprise.exam.frontend.controller,SignUpController,3,58,2,2,2,18,2,6,0,6

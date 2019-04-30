@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PlaceholderService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backend</a> &gt; <a href="index.source.html" class="el_package">kristiania.enterprise.exam.backend.services</a> &gt; <span class="el_source">PlaceholderService.java</span></div><h1>PlaceholderService.java</h1><pre class="source lang-java linenums">package kristiania.enterprise.exam.backend.services;
+
+import kristiania.enterprise.exam.backend.entity.PlaceholderEntity;
+import kristiania.enterprise.exam.backend.repository.PlaceholderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+
+
+import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
+@Service
+<span class="fc" id="L16">public class PlaceholderService {</span>
+
+
+    @Autowired
+    private PlaceholderRepository crud;
+
+    public List&lt;PlaceholderEntity&gt; getAll() {
+
+<span class="fc" id="L24">        List&lt;PlaceholderEntity&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L25">        crud.findAll().forEach(list::add);</span>
+
+<span class="fc" id="L27">        return list;</span>
+    }
+
+
+    @Transactional
+    @Async
+    public void increment(Long id) {
+
+<span class="fc" id="L35">        PlaceholderEntity placeholderEntity = crud.findById(id).get();</span>
+
+<span class="fc" id="L37">        Integer counter = placeholderEntity.getCounter();</span>
+<span class="fc" id="L38">        placeholderEntity.setCounter(counter + 1);</span>
+
+<span class="fc" id="L40">        crud.save(placeholderEntity);</span>
+<span class="fc" id="L41">    }</span>
+
+    @Transactional
+    @Async
+    public void incrementIflessThan(Integer limit, Long id) {
+
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        incrementIf(counter -&gt; counter &lt; limit, id);</span>
+<span class="fc" id="L48">    }</span>
+
+    @Transactional
+    @Async
+    public void incrementIfGreatherThan(Integer limit, Long id) {
+
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        incrementIf(counter -&gt; counter &gt; limit, id);</span>
+<span class="fc" id="L55">    }</span>
+
+
+    private void incrementIf(Predicate&lt;Integer&gt; predicate, Long id) {
+
+<span class="fc" id="L60">        PlaceholderEntity placeholderEntity = crud.findById(id).get();</span>
+<span class="fc" id="L61">        Integer counter = placeholderEntity.getCounter();</span>
+
+<span class="pc bpc" id="L63" title="1 of 2 branches missed.">        if (predicate.test(counter)) {</span>
+
+<span class="fc" id="L65">            counter++;</span>
+<span class="fc" id="L66">            placeholderEntity.setCounter(counter);</span>
+<span class="fc" id="L67">            crud.save(placeholderEntity);</span>
+        }
+<span class="fc" id="L69">    }</span>
+
+
+    public PlaceholderEntity createNew() {
+
+<span class="fc" id="L74">        PlaceholderEntity placeholderEntity = new PlaceholderEntity();</span>
+<span class="fc" id="L75">        placeholderEntity.setCounter(0);</span>
+<span class="fc" id="L76">        placeholderEntity.setA(0);</span>
+<span class="fc" id="L77">        placeholderEntity.setB(0);</span>
+<span class="fc" id="L78">        placeholderEntity.setC(0);</span>
+
+<span class="fc" id="L80">        PlaceholderEntity saved = crud.save(placeholderEntity);</span>
+<span class="fc" id="L81">        return saved;</span>
+    }
+
+    public void delete(Long id) {
+
+<span class="fc" id="L86">        crud.deleteById(id);</span>
+<span class="fc" id="L87">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

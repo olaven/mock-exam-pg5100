@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+report/frontend,kristiania.enterprise.exam,Application,5,3,0,0,2,1,1,1,1,1
+report/frontend,kristiania.enterprise.exam.frontend,RedirectForwardHandler,0,5,0,0,0,2,0,2,0,2
+report/frontend,kristiania.enterprise.exam.frontend,WebSecurityConfig,12,99,0,0,4,29,0,5,0,5
+report/frontend,kristiania.enterprise.exam.frontend.controller,PlaceholderController,0,32,0,0,0,10,0,7,0,7
+report/frontend,kristiania.enterprise.exam.frontend.controller,UserInfoController,0,9,0,0,0,2,0,2,0,2
+report/frontend,kristiania.enterprise.exam.frontend.controller,SignUpController,3,58,2,2,2,18,2,6,0,6
+report/backend,kristiania.enterprise.exam.backend.services,DefaultDataInitializer,3,109,1,3,2,21,1,13,0,12
+report/backend,kristiania.enterprise.exam.backend.services,PlaceholderService,2,137,3,3,0,29,3,10,0,10
+report/backend,kristiania.enterprise.exam.backend.services,UserService,0,40,0,2,0,11,0,3,0,2
+report/backend,kristiania.enterprise.exam.backend.entity,PlaceholderEntity,40,81,6,8,5,24,9,13,3,12
+report/backend,kristiania.enterprise.exam.backend.entity,UserEntity,12,19,0,0,4,10,4,5,4,5
+report/backend,kristiania.enterprise.exam.backend,PasswordConfig,0,7,0,0,0,2,0,2,0,2

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>UserService.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">report</a> &gt; <a href="../index.html" class="el_bundle">backend</a> &gt; <a href="index.source.html" class="el_package">kristiania.enterprise.exam.backend.services</a> &gt; <span class="el_source">UserService.java</span></div><h1>UserService.java</h1><pre class="source lang-java linenums">package kristiania.enterprise.exam.backend.services;
+
+import kristiania.enterprise.exam.backend.entity.UserEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.EntityManager;
+import java.util.Collections;
+
+/*
+ * NOTE: This file is coped from:
+ * https://github.com/arcuri82/testing_security_development_enterprise_systems/blob/18f764c3123f60339ab98167790aa223641e7559/intro/spring/security/authorization/src/main/java/org/tsdes/intro/spring/security/authorization/db/UserService.java
+ */
+
+/**
+ * Created by arcuri82 on 13-Dec-17.
+ */
+@Service
+@Transactional
+<span class="fc" id="L22">public class UserService {</span>
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private EntityManager entityManager;
+
+    public boolean createUser(String username, String password) {
+
+<span class="fc" id="L32">        String hashedPassword = passwordEncoder.encode(password);</span>
+
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (entityManager.find(UserEntity.class, username) != null) {</span>
+<span class="fc" id="L35">            return false;</span>
+        }
+
+<span class="fc" id="L38">        UserEntity user = new UserEntity();</span>
+<span class="fc" id="L39">        user.setUsername(username);</span>
+<span class="fc" id="L40">        user.setPassword(hashedPassword);</span>
+<span class="fc" id="L41">        user.setRoles(Collections.singleton(&quot;USER&quot;));</span>
+<span class="fc" id="L42">        user.setEnabled(true);</span>
+
+<span class="fc" id="L44">        entityManager.persist(user);</span>
+
+<span class="fc" id="L46">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

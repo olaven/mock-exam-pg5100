@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: kristiania.enterprise.exam.backend.services.PlaceholderServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.533 s - in kristiania.enterprise.exam.backend.services.PlaceholderServiceTest
