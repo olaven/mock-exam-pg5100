@@ -1,11 +1,13 @@
 package kristiania.enterprise.exam.backend.entity;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 /*
 * NOTE: This file is coped from:
@@ -34,6 +36,12 @@ public class UserEntity {
     @NotBlank
     @Size(max = 340)// Long passwords are a good thing, but I still need to prevent attacks
     private String password;
+
+    @ElementCollection
+    private Set<String> roles;
+
+    @NotNull
+    private Boolean enabled;
 
     public UserEntity() {
     }
@@ -68,5 +76,22 @@ public class UserEntity {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 }

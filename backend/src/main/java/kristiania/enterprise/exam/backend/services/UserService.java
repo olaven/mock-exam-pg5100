@@ -42,6 +42,8 @@ public class UserService {
         user.setGivenName(givenName);
         user.setFamilyName(familyName);
         user.setPassword(hashed);
+        user.setRoles(Collections.singleton("USER"));
+        user.setEnabled(true);
 
         entityManager.persist(user);
 

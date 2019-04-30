@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1578242c-acaf-41fd-83a8-5fd125ca2a43" name="Default Changelist" comment="" />
+    <list default="true" id="1578242c-acaf-41fd-83a8-5fd125ca2a43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/db/migration/V1.0__createSql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/db/migration/V1.0__createSql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/kristiania/enterprise/exam/backend/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/kristiania/enterprise/exam/backend/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/kristiania/enterprise/exam/backend/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/kristiania/enterprise/exam/backend/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/PlaceholderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/layout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/layout.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/placeholderPage.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/signup.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/signup.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/layout.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/layout.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/placeholderPage.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/signup.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/signup.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/kristiania/enterprise/exam/frontend/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/kristiania/enterprise/exam/frontend/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/test-classes/kristiania/enterprise/exam/frontend/LocalApplicationRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/test-classes/kristiania/enterprise/exam/frontend/LocalApplicationRunner.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/backend/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/frontend/target/" />
@@ -24,34 +49,44 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="73" />
-          <entry key="sql" value="2" />
+          <entry key="class" value="5" />
+          <entry key="java" value="95" />
+          <entry key="md" value="1" />
+          <entry key="sql" value="7" />
+          <entry key="xhtml" value="9" />
           <entry key="yaml" value="2" />
-          <entry key="yml" value="3" />
+          <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="73" />
-          <entry key="SQL" value="2" />
-          <entry key="YAML" value="5" />
+          <entry key="CLASS" value="5" />
+          <entry key="JAVA" value="95" />
+          <entry key="Markdown" value="1" />
+          <entry key="SQL" value="7" />
+          <entry key="XHTML" value="9" />
+          <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="67" />
-          <entry key="java" value="3192" />
-          <entry key="sql" value="16" />
+          <entry key="java" value="3458" />
+          <entry key="md" value="19" />
+          <entry key="sql" value="65" />
+          <entry key="xhtml" value="55" />
           <entry key="yaml" value="32" />
-          <entry key="yml" value="30" />
+          <entry key="yml" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3192" />
+          <entry key="JAVA" value="3458" />
+          <entry key="Markdown" value="19" />
           <entry key="PLAIN_TEXT" value="67" />
-          <entry key="SQL" value="16" />
-          <entry key="YAML" value="62" />
+          <entry key="SQL" value="65" />
+          <entry key="XHTML" value="55" />
+          <entry key="YAML" value="75" />
         </counts>
       </usages-collector>
     </session>
@@ -61,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -81,10 +116,19 @@
     <findStrings>
       <find>canincrement</find>
       <find>getuni</find>
-      <find>ManyToM</find>
       <find>validate</find>
       <find>create</find>
+      <find>ManyToM</find>
+      <find>dev@</find>
+      <find>email</find>
+      <find>select</find>
+      <find>_email</find>
+      <find>user_entity_em</find>
+      <find>create</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
@@ -105,16 +149,23 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserSerbice.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/TripEntity.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/TripService.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/DefaultDataInitializer.java" />
         <option value="$PROJECT_DIR$/backend/src/test/java/kristiania/enterprise/exam/backend/services/PlaceholderServiceTest.java" />
         <option value="$PROJECT_DIR$/backend/src/test/java/kristiania/enterprise/exam/backend/ResetService.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/PurchaseEntity.java" />
         <option value="$PROJECT_DIR$/frontend/src/test/resources/application-test.yaml" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/repository/TripRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql" />
-        <option value="$PROJECT_DIR$/backend/src/test/resources/application.yml" />
         <option value="$PROJECT_DIR$/backend/src/test/java/kristiania/enterprise/exam/backend/services/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/SignUpController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/index.xhtml" />
+        <option value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/login.xhtml" />
+        <option value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/signup.xhtml" />
+        <option value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/layout.xhtml" />
+        <option value="$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java" />
+        <option value="$PROJECT_DIR$/backend/src/test/resources/application.yml" />
+        <option value="$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql" />
         <option value="$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java" />
       </list>
     </option>
@@ -129,6 +180,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -175,6 +227,15 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -192,33 +253,6 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mock" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mock" type="b2602c69:ProjectViewProjectNode" />
@@ -268,6 +302,44 @@
               <item name="mock" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="exam" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -305,10 +377,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java&#10;userse&#9;PSI&#9;JAVA://kristiania.enterprise.exam.backend.services.UserService&#10;useren&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java&#10;triprepo&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/repository/TripRepository.java&#10;application&#9;RUN_CONFIGURATION&#9;Application&#10;application-test&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/resources/application-test.yaml&#10;tripentit&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/TripEntity.java&#10;trip&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/services/TripService.java&#10;userser&#9;PSI&#9;JAVA://kristiania.enterprise.exam.backend.services.UserServiceTest&#10;tripen&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/TripEntity.java&#10;seas&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/Season.java&#10;initi&#9;PSI&#9;JAVA://kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.DockerInitializer" />
+    <property name="SearchEverywhereHistoryKey" value="userser&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java&#10;createuser&#9;PSI&#9;JAVA://org.h2.command.ddl.CreateUser&#10;sql&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/resources/db/migration/V1.0__createSql.sql&#10;userservi&#9;FILE&#9;jar:///Users/olav/.m2/repository/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class&#10;useren&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java&#10;comment&#9;ACTION&#9;CommentByBlockComment&#10;localap&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/LocalApplicationRunner.java&#10;readme&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/README.md&#10;userse&#9;PSI&#9;JAVA://kristiania.enterprise.exam.backend.services.UserService&#10;triprepo&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/repository/TripRepository.java&#10;application&#9;RUN_CONFIGURATION&#9;Application&#10;application-test&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/resources/application-test.yaml&#10;tripentit&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/TripEntity.java&#10;trip&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/services/TripService.java&#10;tripen&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/entity/TripEntity.java&#10;seas&#9;FILE&#9;file:///Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/src/main/java/kristiania/enterprise/exam/backend/Season.java&#10;initi&#9;PSI&#9;JAVA://kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.DockerInitializer" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556638958812" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556641697755" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -332,7 +404,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testNoTwoUsersWithSameId">
+  <component name="RunManager" selected="Application.LocalApplicationRunner">
+    <configuration name="LocalApplicationRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kristiania.enterprise.exam.frontend.LocalApplicationRunner" />
+      <module name="frontend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kristiania.enterprise.exam.frontend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeleniumLocalIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="frontend" />
       <extension name="coverage">
@@ -389,11 +474,13 @@
       <item itemvalue="JUnit.SeleniumLocalIT" />
       <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="JUnit.UserServiceTest.testNoTwoUsersWithSameId" />
+      <item itemvalue="Application.LocalApplicationRunner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.testNoTwoUsersWithSameId" />
+        <item itemvalue="Application.LocalApplicationRunner" />
         <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testNoTwoUsersWithSameId" />
         <item itemvalue="JUnit.SeleniumLocalIT" />
       </list>
     </recent_temporary>
@@ -409,20 +496,11 @@
       <option name="presentableId" value="Default" />
       <updated>1556631675785</updated>
       <workItem from="1556631677109" duration="1110000" />
-      <workItem from="1556633509864" duration="4550000" />
+      <workItem from="1556633509864" duration="7064000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceTest - 2019.04.30 at 17h 25m 49s.xml">
-      <configuration name="UserServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest - 2019.04.30 at 17h 27m 25s.xml">
-      <configuration name="UserServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceTest - 2019.04.30 at 17h 28m 08s.xml">
-      <configuration name="UserServiceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UserServiceTest - 2019.04.30 at 17h 29m 06s.xml">
       <configuration name="UserServiceTest" configurationId="JUnit" />
     </history-entry>
@@ -444,9 +522,18 @@
     <history-entry file="UserServiceTest_testNoTwoUsersWithSameId - 2019.04.30 at 17h 40m 51s.xml">
       <configuration name="UserServiceTest.testNoTwoUsersWithSameId" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserServiceTest_testNoTwoUsersWithSameId - 2019.04.30 at 17h 42m 46s.xml">
+      <configuration name="UserServiceTest.testNoTwoUsersWithSameId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest - 2019.04.30 at 18h 25m 18s.xml">
+      <configuration name="UserServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest - 2019.04.30 at 18h 26m 23s.xml">
+      <configuration name="UserServiceTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5660000" />
+    <option name="totallyTimeSpent" value="8174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -462,8 +549,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293124" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.55729795" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39927623" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55729795" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39927623" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -526,13 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/test/java/kristiania/enterprise/exam/frontend/LocalApplicationRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -638,10 +718,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="195">
+            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/SignUpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="47" column="23" lean-forward="true" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+          <folding>
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2371#2372#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+            <element signature="e#2478#2479#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2731#2732#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2931#2932#0" expanded="true" />
+            <element signature="e#2973#2974#0" expanded="true" />
+            <element signature="e#3007#3008#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3075#3076#0" expanded="true" />
+            <element signature="e#3125#3126#0" expanded="true" />
+            <element signature="e#3167#3168#0" expanded="true" />
+            <element signature="e#3204#3205#0" expanded="true" />
+            <element signature="e#3237#3238#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3333#3334#0" expanded="true" />
+            <element signature="e#3368#3369#0" expanded="true" />
+            <element signature="e#3399#3400#0" expanded="true" />
+            <element signature="e#3447#3448#0" expanded="true" />
+            <element signature="e#3487#3488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/signup.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/layout.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/test/java/kristiania/enterprise/exam/frontend/LocalApplicationRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.4.197/h2-1.4.197.jar!/org/h2/engine/Session.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="403" column="38" lean-forward="true" selection-start-line="403" selection-start-column="38" selection-end-line="403" selection-end-column="38" />
+          <folding>
+            <element signature="e#12721#12722#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/test/java/kristiania/enterprise/exam/backend/services/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="97" selection-start-line="5" selection-start-column="97" selection-end-line="5" selection-end-column="97" />
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/java/kristiania/enterprise/exam/frontend/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="94" column="88" selection-start-line="94" selection-start-column="88" selection-end-line="94" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+          <folding>
+            <element signature="e#1856#1857#0" expanded="true" />
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,24 +861,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/entity/UserEntity.java">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/db/migration/V1.0__createSql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="105">
+          <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/test/java/kristiania/enterprise/exam/backend/services/UserServiceTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/h2database/h2/1.4.197/h2-1.4.197.jar!/org/h2/command/ddl/CreateUser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/kristiania/enterprise/exam/backend/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+        <state relative-caret-position="285">
+          <caret line="44" column="53" selection-start-line="44" selection-start-column="53" selection-end-line="44" selection-end-column="53" />
         </state>
       </provider>
     </entry>
