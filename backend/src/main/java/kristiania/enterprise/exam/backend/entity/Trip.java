@@ -10,7 +10,8 @@ import java.time.LocalDate;
         @NamedQuery(name = Trip.GET_TRIP_BY_LOCATION_NAME, query = "select trip from Trip trip where trip.location.name = :locationName"),
         @NamedQuery(name = Trip.GET_TRIP_BY_COST_LESS_THAN, query = "select trip from Trip trip where trip.cost < :max"),
         @NamedQuery(name = Trip.GET_TRIP_BY_COST_GREATER_THAN, query = "select trip from Trip trip where trip.cost > :min"),
-        @NamedQuery(name = Trip.GET_TOP_TRIPS, query = "select booking.trip from Booking booking group by booking.trip order by count(booking.user) desc"),
+        @NamedQuery(name = Trip.GET_TOP_TRIPS, query = "select booking.trip from Booking booking group by booking.trip.id order by Count(booking.trip) desc")
+        //@NamedQuery(name = Trip.GET_TOP_TRIPS, query = "select booking.trip from Booking booking group by booking.trip order by count(booking.trip) desc"),
 })
 @Entity
 public class Trip {
@@ -37,7 +38,7 @@ public class Trip {
     private Integer cost;
 
     @NotNull
-    @ManyToOne(cascade = CascadeType.PERSIST) //do not need to create new locations explicitly
+    @ManyToOne
     private Location location;
 
     @Enumerated(EnumType.STRING)

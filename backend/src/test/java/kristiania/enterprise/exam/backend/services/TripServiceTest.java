@@ -124,7 +124,54 @@ class TripServiceTest extends ServiceTestBase {
         assertFalse(unpopularFound);
         assertTrue(firstIsFirst);
         assertTrue(secondIsSecond);
+    }
 
+
+    @Test
+    public void canGetTopTripsWithMoreData() {
+
+        String email = persistUser();
+
+        Long first = persistDefaultTrip();
+        Long second = persistDefaultTrip();
+        Long moderate1 = persistDefaultTrip();
+        Long moderate2 = persistDefaultTrip();
+        Long unpopular = persistDefaultTrip();
+
+        for (int i = 0; i < 5; i++) {
+            userService.bookTrip(email, first);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            userService.bookTrip(email, second);
+        }
+
+        userService.bookTrip(email, moderate1);
+        userService.bookTrip(email, moderate2);
+
+        //NOTE: "unpopular" never booked
+
+        List<Trip> topTrips = tripService.getTopTrips(3);
+        boolean unpopularFound = topTrips.stream()
+                .filter(trip -> trip.getId().equals(unpopular))
+                .findFirst()
+                .isPresent();
+
+        boolean firstIsFirst = topTrips.stream()
+                .map(trip -> trip.getId())
+                .findFirst()
+                .get()
+                .equals(first);
+
+        boolean secondIsSecond = topTrips.stream()
+                .map(trip -> trip.getId())
+                .toArray()[1]
+                .equals(second);
+
+        assertEquals(3, topTrips.size());
+        assertFalse(unpopularFound);
+        assertTrue(firstIsFirst);
+        assertTrue(secondIsSecond);
     }
 
 

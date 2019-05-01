@@ -17,6 +17,8 @@ public class DefaultDataInitializer {
     private UserService userService;
     @Autowired
     private TripService tripService;
+    @Autowired
+    private LocationService locationService;
 
     @PostConstruct
     public void initialize() {
@@ -37,16 +39,12 @@ public class DefaultDataInitializer {
         attempt(() -> userService.createUser("spider@man.com", "Peter", "Parker", "nyc"));
 
 
-        // LOCATIONS (created through cascade)
-        Location alaska = new Location();
-        alaska.setName("Alaska");
-        alaska.setDescription("Up northernest North America");
-        alaska.setTrips(new ArrayList<>());
+        // LOCATIONS
+        Long alaskaId = attempt(() -> locationService.createLocation("Alaska", "Far north in North America"));
+        Long netherlandsId = attempt(() -> locationService.createLocation("The Netherlands", "A flat land with nice buildings, flowers and comfortable climate"));
 
-        Location netherlands = new Location();
-        netherlands.setName("The Netherlands");
-        netherlands.setDescription("A flat land with nice buildings, flowers and comfortable climate");
-        netherlands.setTrips(new ArrayList<>());
+        Location alaska = locationService.getLocation(alaskaId);
+        Location netherlands = locationService.getLocation(netherlandsId);
 
         // TRIPS
         Long christmasInAlaska = attempt(() -> tripService.createTrip("Christmas in Alaska", "This is a trip for the whole family", 2999, alaska, Season.CHRISTMAS, LocalDate.now().plusMonths(2)));
@@ -81,6 +79,7 @@ public class DefaultDataInitializer {
         try{
             return lambda.get();
         }catch (Exception e){
+            System.out.println(e);
             return null;
         }
     }
