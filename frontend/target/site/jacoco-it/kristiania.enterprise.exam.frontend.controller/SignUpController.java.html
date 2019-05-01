@@ -31,53 +31,94 @@ import javax.inject.Named;
     private UserDetailsService userDetailsService;
 
 
-    private String username;
-
+    private String email;
+    private String givenName;
+    private String familyName;
     private String password;
 
     public String signUpUser(){
 
-<span class="fc" id="L40">        boolean registered = false;</span>
+<span class="fc" id="L41">        boolean registered = false;</span>
         try {
-<span class="fc" id="L42">            registered = userService.createUser(username, password);</span>
-<span class="nc" id="L43">        } catch (Exception e){</span>
+<span class="fc" id="L43">            registered = userService.createUser(email, givenName, familyName, password);</span>
+<span class="nc" id="L44">        } catch (Exception e){</span>
             //nothing to do
-<span class="fc" id="L45">        }</span>
+<span class="fc" id="L46">        }</span>
 
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        if(registered){</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">        if(registered){</span>
 
-<span class="fc" id="L49">            UserDetails userDetails = userDetailsService.loadUserByUsername(username);</span>
-<span class="fc" id="L50">            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(</span>
+<span class="fc" id="L50">            UserDetails userDetails = userDetailsService.loadUserByUsername(email);</span>
+<span class="fc" id="L51">            UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(</span>
                     userDetails,
                     password,
-<span class="fc" id="L53">                    userDetails.getAuthorities());</span>
+<span class="fc" id="L54">                    userDetails.getAuthorities());</span>
 
-<span class="fc" id="L55">            authenticationManager.authenticate(token);</span>
+<span class="fc" id="L56">            authenticationManager.authenticate(token);</span>
 
-<span class="pc bpc" id="L57" title="1 of 2 branches missed.">            if (token.isAuthenticated()) {</span>
-<span class="fc" id="L58">                SecurityContextHolder.getContext().setAuthentication(token);</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">            if (token.isAuthenticated()) {</span>
+<span class="fc" id="L59">                SecurityContextHolder.getContext().setAuthentication(token);</span>
             }
 
-<span class="fc" id="L61">            return &quot;/index.jsf?faces-redirect=true&quot;;</span>
+<span class="fc" id="L62">            return &quot;/index.jsf?faces-redirect=true&quot;;</span>
         } else {
-<span class="nc" id="L63">            return &quot;/signup.jsf?faces-redirect=true&amp;error=true&quot;;</span>
+<span class="nc" id="L64">            return &quot;/signup.jsf?faces-redirect=true&amp;error=true&quot;;</span>
         }
     }
 
-    public String getUsername() {
-<span class="fc" id="L68">        return username;</span>
+    public UserService getUserService() {
+<span class="nc" id="L69">        return userService;</span>
     }
 
-    public void setUsername(String username) {
-<span class="fc" id="L72">        this.username = username;</span>
-<span class="fc" id="L73">    }</span>
+    public void setUserService(UserService userService) {
+<span class="nc" id="L73">        this.userService = userService;</span>
+<span class="nc" id="L74">    }</span>
+
+    public AuthenticationManager getAuthenticationManager() {
+<span class="nc" id="L77">        return authenticationManager;</span>
+    }
+
+    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
+<span class="nc" id="L81">        this.authenticationManager = authenticationManager;</span>
+<span class="nc" id="L82">    }</span>
+
+    public UserDetailsService getUserDetailsService() {
+<span class="nc" id="L85">        return userDetailsService;</span>
+    }
+
+    public void setUserDetailsService(UserDetailsService userDetailsService) {
+<span class="nc" id="L89">        this.userDetailsService = userDetailsService;</span>
+<span class="nc" id="L90">    }</span>
+
+    public String getEmail() {
+<span class="fc" id="L93">        return email;</span>
+    }
+
+    public void setEmail(String email) {
+<span class="fc" id="L97">        this.email = email;</span>
+<span class="fc" id="L98">    }</span>
+
+    public String getGivenName() {
+<span class="fc" id="L101">        return givenName;</span>
+    }
+
+    public void setGivenName(String givenName) {
+<span class="fc" id="L105">        this.givenName = givenName;</span>
+<span class="fc" id="L106">    }</span>
+
+    public String getFamilyName() {
+<span class="fc" id="L109">        return familyName;</span>
+    }
+
+    public void setFamilyName(String familyName) {
+<span class="fc" id="L113">        this.familyName = familyName;</span>
+<span class="fc" id="L114">    }</span>
 
     public String getPassword() {
-<span class="fc" id="L76">        return password;</span>
+<span class="fc" id="L117">        return password;</span>
     }
 
     public void setPassword(String password) {
-<span class="fc" id="L80">        this.password = password;</span>
-<span class="fc" id="L81">    }</span>
+<span class="fc" id="L121">        this.password = password;</span>
+<span class="fc" id="L122">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

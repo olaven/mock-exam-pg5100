@@ -2,12 +2,18 @@ package kristiania.enterprise.exam.backend.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
+@NamedQueries({
+        @NamedQuery(name = BookingEntity.GET_BOOKINGS_BY_USER, query = "select booking from BookingEntity booking where user.email = :email")
+})
 @Entity
-public class PurchaseEntity {
+public class BookingEntity {
+
+    public static final String GET_BOOKINGS_BY_USER = "GET_BOOKINGS_BY_USER";
 
     @Id
+    @GeneratedValue
     private Long id;
 
     @ManyToOne
@@ -19,10 +25,9 @@ public class PurchaseEntity {
     TripEntity trip;
 
     @NotNull
-    @Temporal(TemporalType.DATE)
-    private Date timeOfPurchase;
+    private LocalDate timeOfPurchase;
 
-    public PurchaseEntity() {
+    public BookingEntity() {
     }
 
     public Long getId() {
@@ -49,11 +54,7 @@ public class PurchaseEntity {
         this.trip = trip;
     }
 
-    public Date getTimeOfPurchase() {
-        return timeOfPurchase;
-    }
-
-    public void setTimeOfPurchase(Date timeOfPurchase) {
+    public void setTimeOfPurchase(LocalDate timeOfPurchase) {
         this.timeOfPurchase = timeOfPurchase;
     }
 }

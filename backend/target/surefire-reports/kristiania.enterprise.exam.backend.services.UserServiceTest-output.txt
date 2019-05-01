@@ -1,9 +1,21 @@
-2019-04-30 15:41:56.308  INFO 9798 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [kristiania.enterprise.exam.backend.services.UserServiceTest], using SpringBootContextLoader
-2019-04-30 15:41:56.310  INFO 9798 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2019-04-30 15:41:56.312  INFO 9798 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2019-04-30 15:41:56.344  INFO 9798 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration kristiania.enterprise.exam.backend.StubApplication for test class kristiania.enterprise.exam.backend.services.UserServiceTest
-2019-04-30 15:41:56.349  INFO 9798 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-04-30 15:41:56.350  INFO 9798 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@465f2385, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7f152668, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63fda184, org.springframework.test.context.support.DirtiesContextTestExecutionListener@49262934, org.springframework.test.context.transaction.TransactionalTestExecutionListener@76da789e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@202a364b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2e55524b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56c2b13c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@73793df2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@210c5b8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@65318bb]
+11:40:12.454 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:40:12.486 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:40:12.532 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [kristiania.enterprise.exam.backend.services.UserServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:40:12.555 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [kristiania.enterprise.exam.backend.services.UserServiceTest], using SpringBootContextLoader
+11:40:12.562 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: class path resource [kristiania/enterprise/exam/backend/services/UserServiceTest-context.xml] does not exist
+11:40:12.562 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: class path resource [kristiania/enterprise/exam/backend/services/UserServiceTestContext.groovy] does not exist
+11:40:12.563 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:40:12.564 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [kristiania.enterprise.exam.backend.services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:40:12.610 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [kristiania.enterprise.exam.backend.services.UserServiceTest]
+11:40:12.732 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend/target/test-classes/kristiania/enterprise/exam/backend/StubApplication.class]
+11:40:12.737 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration kristiania.enterprise.exam.backend.StubApplication for test class kristiania.enterprise.exam.backend.services.UserServiceTest
+11:40:12.980 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [kristiania.enterprise.exam.backend.services.UserServiceTest]: using defaults.
+11:40:12.982 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+11:40:13.001 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+11:40:13.011 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@75839695, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@21a6a494, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@794c5f5e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4ab66127, org.springframework.test.context.transaction.TransactionalTestExecutionListener@236861da, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@37fef327, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2cd3fc29, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@55951fcd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3513d214, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7534785a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@46b5f061]
+11:40:13.016 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@48c5698 testClass = UserServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17884d testClass = UserServiceTest, locations = '{}', classes = '{class kristiania.enterprise.exam.backend.StubApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@68d7a2df, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a451491, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17fa1336, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1e1e9ef3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+11:40:13.024 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@48c5698 testClass = UserServiceTest, testInstance = kristiania.enterprise.exam.backend.services.UserServiceTest@34f23816, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@17884d testClass = UserServiceTest, locations = '{}', classes = '{class kristiania.enterprise.exam.backend.StubApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@68d7a2df, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@a451491, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@17fa1336, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1e1e9ef3], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+11:40:13.052 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,576 +25,101 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-04-30 15:41:56.379  INFO 9798 --- [           main] k.e.e.backend.services.UserServiceTest   : Starting UserServiceTest on Olavs-MacBook-Pro.local with PID 9798 (started by olav in /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend)
-2019-04-30 15:41:56.379  INFO 9798 --- [           main] k.e.e.backend.services.UserServiceTest   : No active profile set, falling back to default profiles: default
-2019-04-30 15:41:56.502  INFO 9798 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-04-30 15:41:56.510  INFO 9798 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 1 repository interfaces.
-2019-04-30 15:41:56.658  INFO 9798 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2019-04-30 15:41:56.660  INFO 9798 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2019-04-30 15:41:56.660  INFO 9798 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:db (H2 1.4)
-2019-04-30 15:41:56.676  INFO 9798 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.006s)
-2019-04-30 15:41:56.690  INFO 9798 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": 1.0
-2019-04-30 15:41:56.690  INFO 9798 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "PUBLIC" is up to date. No migration necessary.
-2019-04-30 15:41:56.748  INFO 9798 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-05-01 11:40:13.660  INFO 18496 --- [           main] k.e.e.backend.services.UserServiceTest   : Starting UserServiceTest on host-37-191-214-10.lynet.no with PID 18496 (started by olav in /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/backend)
+2019-05-01 11:40:13.662  INFO 18496 --- [           main] k.e.e.backend.services.UserServiceTest   : No active profile set, falling back to default profiles: default
+2019-05-01 11:40:14.250  INFO 18496 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 11:40:14.336  INFO 18496 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 1 repository interfaces.
+2019-05-01 11:40:15.302  INFO 18496 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.1 by Boxfuse
+2019-05-01 11:40:15.317  INFO 18496 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 11:40:15.665  INFO 18496 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 11:40:15.675  INFO 18496 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:h2:mem:db (H2 1.4)
+2019-05-01 11:40:15.880  INFO 18496 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.028s)
+2019-05-01 11:40:15.898  INFO 18496 --- [           main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table: "PUBLIC"."flyway_schema_history"
+2019-05-01 11:40:15.933  INFO 18496 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2019-05-01 11:40:15.935  INFO 18496 --- [           main] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version 1.0 - createSql
+2019-05-01 11:40:15.985  INFO 18496 --- [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC" (execution time 00:00.093s)
+2019-05-01 11:40:16.210  INFO 18496 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-04-30 15:41:56.754  INFO 9798 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2019-04-30 15:41:56.816  INFO 9798 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: insert into user_entity (enabled, password, username) values (?, ?, ?)
-Hibernate: insert into user_entity_roles (user_entity_username, roles) values (?, ?)
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: insert into user_entity (enabled, password, username) values (?, ?, ?)
-Hibernate: insert into user_entity_roles (user_entity_username, roles) values (?, ?)
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: insert into user_entity (enabled, password, username) values (?, ?, ?)
-Hibernate: insert into user_entity_roles (user_entity_username, roles) values (?, ?)
+2019-05-01 11:40:16.322  INFO 18496 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-01 11:40:16.323  INFO 18496 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 11:40:16.546  INFO 18496 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 11:40:16.781  INFO 18496 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-05-01 11:40:18.129  INFO 18496 --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-05-01 11:40:18.283  INFO 18496 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+2019-05-01 11:40:19.563  INFO 18496 --- [           main] k.e.e.backend.services.UserServiceTest   : Started UserServiceTest in 6.506 seconds (JVM running for 8.319)
+Hibernate: delete from user_entity_roles
+Hibernate: delete from booking_entity
+Hibernate: delete from user_entity
+Hibernate: delete from trip_entity
+Hibernate: delete from user_entity
+Hibernate: delete from location_entity
 Hibernate: call next value for hibernate_sequence
-Hibernate: insert into placeholder_entity (a, b, c, counter, version, id) values (?, ?, ?, ?, ?, ?)
 Hibernate: call next value for hibernate_sequence
-Hibernate: insert into placeholder_entity (a, b, c, counter, version, id) values (?, ?, ?, ?, ?, ?)
+Hibernate: insert into location_entity (description, name, id) values (?, ?, ?)
+Hibernate: insert into trip_entity (cost, date, description, location_id, season, title, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: delete from user_entity_roles
+Hibernate: delete from booking_entity
+Hibernate: delete from user_entity
+Hibernate: delete from trip_entity
+Hibernate: delete from user_entity
+Hibernate: delete from location_entity
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: delete from user_entity_roles
+Hibernate: delete from booking_entity
+Hibernate: delete from user_entity
+Hibernate: delete from trip_entity
+Hibernate: delete from user_entity
+Hibernate: delete from location_entity
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+Hibernate: delete from user_entity_roles
+Hibernate: delete from booking_entity
+Hibernate: delete from user_entity
+Hibernate: delete from trip_entity
+Hibernate: delete from user_entity
+Hibernate: delete from location_entity
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
 Hibernate: call next value for hibernate_sequence
-Hibernate: insert into placeholder_entity (a, b, c, counter, version, id) values (?, ?, ?, ?, ?, ?)
-2019-04-30 15:41:57.184  INFO 9798 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.200 ERROR 9798 --- [         task-4] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]]
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-2019-04-30 15:41:57.201 ERROR 9798 --- [         task-7] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]]
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-2019-04-30 15:41:57.201 ERROR 9798 --- [         task-2] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.201 ERROR 9798 --- [         task-4] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [10]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.202 ERROR 9798 --- [         task-5] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-2019-04-30 15:41:57.203 ERROR 9798 --- [         task-8] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]]
-2019-04-30 15:41:57.203 ERROR 9798 --- [         task-7] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [10]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.204 ERROR 9798 --- [         task-5] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [10]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.204 ERROR 9798 --- [         task-2] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [10]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.205 ERROR 9798 --- [         task-1] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]]
-2019-04-30 15:41:57.205 ERROR 9798 --- [         task-8] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [10]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#10]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-2019-04-30 15:41:57.206 ERROR 9798 --- [         task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [11]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.212 ERROR 9798 --- [         task-4] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-Hibernate: update placeholder_entity set a=?, b=?, c=?, counter=?, version=? where id=? and version=?
-2019-04-30 15:41:57.214 ERROR 9798 --- [         task-2] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]]
-2019-04-30 15:41:57.214 ERROR 9798 --- [         task-1] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.214 ERROR 9798 --- [         task-4] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [11]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.215 ERROR 9798 --- [         task-2] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [12]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.215 ERROR 9798 --- [         task-1] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [12]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#12]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.216 ERROR 9798 --- [         task-3] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.217 ERROR 9798 --- [         task-3] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [11]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.222 ERROR 9798 --- [         task-8] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]]
-2019-04-30 15:41:57.222 ERROR 9798 --- [         task-7] o.h.i.ExceptionMapperStandardImpl        : HHH000346: Error during managed flush [Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]]
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-Hibernate: select placeholde0_.id as id1_0_0_, placeholde0_.a as a2_0_0_, placeholde0_.b as b3_0_0_, placeholde0_.c as c4_0_0_, placeholde0_.counter as counter5_0_0_, placeholde0_.version as version6_0_0_ from placeholder_entity placeholde0_ where placeholde0_.id=?
-2019-04-30 15:41:57.224 ERROR 9798 --- [         task-8] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [11]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.224 ERROR 9798 --- [         task-7] .a.i.SimpleAsyncUncaughtExceptionHandler : Unexpected exception occurred invoking async method: public void kristiania.enterprise.exam.backend.services.PlaceholderService.increment(java.lang.Long)
-
-org.springframework.orm.ObjectOptimisticLockingFailureException: Object of class [kristiania.enterprise.exam.backend.entity.PlaceholderEntity] with identifier [11]: optimistic locking failed; nested exception is org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:335) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:253) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:536) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:746) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:115) ~[spring-aop-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_144]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_144]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_144]
-Caused by: org.hibernate.StaleObjectStateException: Row was updated or deleted by another transaction (or unsaved-value mapping was incorrect) : [kristiania.enterprise.exam.backend.entity.PlaceholderEntity#11]
-	at org.hibernate.persister.entity.AbstractEntityPersister.check(AbstractEntityPersister.java:2522) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3355) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.updateOrInsert(AbstractEntityPersister.java:3229) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.update(AbstractEntityPersister.java:3630) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:146) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:478) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:356) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1454) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:511) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3283) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2479) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:473) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:178) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:39) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:271) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:98) ~[hibernate-core-5.3.7.Final.jar:5.3.7.Final]
-	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:532) ~[spring-orm-5.1.5.RELEASE.jar:5.1.5.RELEASE]
-	... 11 common frames omitted
-
-2019-04-30 15:41:57.365  INFO 9798 --- [           main] k.e.e.backend.services.UserServiceTest   : Started UserServiceTest in 1.013 seconds (JVM running for 9.995)
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: insert into user_entity (enabled, password, username) values (?, ?, ?)
-Hibernate: insert into user_entity_roles (user_entity_username, roles) values (?, ?)
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: select userentity0_.username as username1_1_0_, userentity0_.enabled as enabled2_1_0_, userentity0_.password as password3_1_0_ from user_entity userentity0_ where userentity0_.username=?
-Hibernate: insert into user_entity (enabled, password, username) values (?, ?, ?)
-Hibernate: insert into user_entity_roles (user_entity_username, roles) values (?, ?)
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into location_entity (description, name, id) values (?, ?, ?)
+Hibernate: insert into trip_entity (cost, date, description, location_id, season, title, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select bookingent0_.id as id1_0_, bookingent0_.time_of_purchase as time_of_2_0_, bookingent0_.trip_id as trip_id3_0_, bookingent0_.user_email as user_ema4_0_ from booking_entity bookingent0_ where bookingent0_.user_email=?
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: select tripentity0_.id as id1_2_0_, tripentity0_.cost as cost2_2_0_, tripentity0_.date as date3_2_0_, tripentity0_.description as descript4_2_0_, tripentity0_.location_id as location7_2_0_, tripentity0_.season as season5_2_0_, tripentity0_.title as title6_2_0_, locationen1_.id as id1_1_1_, locationen1_.description as descript2_1_1_, locationen1_.name as name3_1_1_ from trip_entity tripentity0_ inner join location_entity locationen1_ on tripentity0_.location_id=locationen1_.id where tripentity0_.id=?
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into booking_entity (time_of_purchase, trip_id, user_email, id) values (?, ?, ?, ?)
+Hibernate: select bookingent0_.id as id1_0_, bookingent0_.time_of_purchase as time_of_2_0_, bookingent0_.trip_id as trip_id3_0_, bookingent0_.user_email as user_ema4_0_ from booking_entity bookingent0_ where bookingent0_.user_email=?
+Hibernate: select tripentity0_.id as id1_2_0_, tripentity0_.cost as cost2_2_0_, tripentity0_.date as date3_2_0_, tripentity0_.description as descript4_2_0_, tripentity0_.location_id as location7_2_0_, tripentity0_.season as season5_2_0_, tripentity0_.title as title6_2_0_, locationen1_.id as id1_1_1_, locationen1_.description as descript2_1_1_, locationen1_.name as name3_1_1_ from trip_entity tripentity0_ inner join location_entity locationen1_ on tripentity0_.location_id=locationen1_.id where tripentity0_.id=?
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: delete from user_entity_roles
+Hibernate: delete from booking_entity
+Hibernate: delete from user_entity
+Hibernate: delete from trip_entity
+Hibernate: delete from user_entity
+Hibernate: delete from location_entity
+Hibernate: call next value for hibernate_sequence
+Hibernate: call next value for hibernate_sequence
+Hibernate: insert into location_entity (description, name, id) values (?, ?, ?)
+Hibernate: insert into trip_entity (cost, date, description, location_id, season, title, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: insert into user_entity (enabled, family_name, given_name, password, email) values (?, ?, ?, ?, ?)
+Hibernate: insert into user_entity_roles (user_entity_email, roles) values (?, ?)
+Hibernate: select userentity0_.email as email1_3_0_, userentity0_.enabled as enabled2_3_0_, userentity0_.family_name as family_n3_3_0_, userentity0_.given_name as given_na4_3_0_, userentity0_.password as password5_3_0_ from user_entity userentity0_ where userentity0_.email=?
+Hibernate: select tripentity0_.id as id1_2_0_, tripentity0_.cost as cost2_2_0_, tripentity0_.date as date3_2_0_, tripentity0_.description as descript4_2_0_, tripentity0_.location_id as location7_2_0_, tripentity0_.season as season5_2_0_, tripentity0_.title as title6_2_0_, locationen1_.id as id1_1_1_, locationen1_.description as descript2_1_1_, locationen1_.name as name3_1_1_ from trip_entity tripentity0_ inner join location_entity locationen1_ on tripentity0_.location_id=locationen1_.id where tripentity0_.id=?

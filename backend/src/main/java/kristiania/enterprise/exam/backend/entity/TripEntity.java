@@ -3,12 +3,20 @@ package kristiania.enterprise.exam.backend.entity;
 import kristiania.enterprise.exam.backend.Season;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import java.util.Date;
+import javax.validation.constraints.*;
+import java.time.LocalDate;
 
+@NamedQueries({
+        @NamedQuery(name = TripEntity.GET_TRIP_BY_LOCATION_NAME, query = "select trip from TripEntity trip where trip.location.name = :locationName"),
+        @NamedQuery(name = TripEntity.GET_TRIP_BY_COST_LESS_THAN, query = "select trip from TripEntity trip where trip.cost < :max"),
+        @NamedQuery(name = TripEntity.GET_TRIP_BY_COST_GREATER_THAN, query = "select trip from TripEntity trip where trip.cost > :min")
+})
 @Entity
 public class TripEntity {
+
+    public static final String GET_TRIP_BY_LOCATION_NAME = "GET_TRIP_BY_LOCATION_NAME";
+    public static final String GET_TRIP_BY_COST_LESS_THAN = "GET_TRIP_BY_COST_LESS_THAN";
+    public static final String GET_TRIP_BY_COST_GREATER_THAN = "GET_TRIP_BY_COST_GREATER_THAN";
 
     @Id
     @GeneratedValue
@@ -22,15 +30,19 @@ public class TripEntity {
     @Size(max = 150)
     private String description;
 
-    @NotBlank
-    @Size(max = 150)
-    private String location;
+    @NotNull
+    @Min(0)
+    private Integer cost;
+
+    @NotNull
+    @ManyToOne(cascade = CascadeType.PERSIST) //do not need to create new locations explicitly
+    private LocationEntity location;
 
     @Enumerated(EnumType.STRING)
     private Season season;
 
-    @Temporal(TemporalType.DATE)
-    private Date date;
+    @Future
+    private LocalDate date;
 
     public TripEntity() { }
 
@@ -58,11 +70,19 @@ public class TripEntity {
         this.description = description;
     }
 
-    public String getLocation() {
+    public Integer getCost() {
+        return cost;
+    }
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
+    }
+
+    public LocationEntity getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(LocationEntity location) {
         this.location = location;
     }
 
@@ -74,11 +94,11 @@ public class TripEntity {
         this.season = season;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }

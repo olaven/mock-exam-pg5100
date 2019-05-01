@@ -1,6 +1,5 @@
 /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/PageObject.java
 /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/po/SignUpPO.java
-/Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/po/ui/PlaceholderPO.java
 /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/po/IndexPO.java
 /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/po/LayoutPO.java
 /Users/olav/Documents/skole/kristiania/4_semester/enterprise/mock/frontend/src/test/java/kristiania/enterprise/exam/frontend/selenium/SeleniumLocalIT.java

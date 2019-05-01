@@ -6,6 +6,5 @@ kristiania/enterprise/exam/frontend/selenium/po/LayoutPO.class
 kristiania/enterprise/exam/frontend/selenium/SeleniumTestBase.class
 kristiania/enterprise/exam/frontend/selenium/SeleniumDockerIT.class
 kristiania/enterprise/exam/frontend/LocalApplicationRunner.class
-kristiania/enterprise/exam/frontend/selenium/po/ui/PlaceholderPO.class
 kristiania/enterprise/exam/frontend/selenium/po/SignUpPO.class
 kristiania/enterprise/exam/frontend/selenium/PageObject.class

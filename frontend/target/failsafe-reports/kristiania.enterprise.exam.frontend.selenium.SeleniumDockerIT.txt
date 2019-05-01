@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 72.532 s - in kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 72.468 s <<< FAILURE! - in kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT
+kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT  Time elapsed: 72.468 s  <<< ERROR!
+org.testcontainers.containers.ContainerLaunchException: Container startup failed
+	at kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.startDocker(SeleniumDockerIT.java:92)
+Caused by: org.rnorth.ducttape.RetryCountExceededException: Retry limit hit with exception
+	at kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.startDocker(SeleniumDockerIT.java:92)
+Caused by: org.testcontainers.containers.ContainerLaunchException: Could not create/start container
+	at kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.startDocker(SeleniumDockerIT.java:92)
+Caused by: org.testcontainers.containers.ContainerLaunchException: Timed out waiting for URL to be accessible (http://localhost:32775/ should return HTTP 200)
+	at kristiania.enterprise.exam.frontend.selenium.SeleniumDockerIT.startDocker(SeleniumDockerIT.java:92)
+

@@ -27,23 +27,27 @@ import java.util.Collections;
     @Autowired
     private EntityManager entityManager;
 
-    public boolean createUser(String username, String password) {
+    public boolean createUser(String email, String givenName, String familyName, String password) {
 
-<span class="fc" id="L32">        String hashedPassword = passwordEncoder.encode(password);</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        boolean present = entityManager.find(UserEntity.class, email) != null;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (present) {</span>
 
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (entityManager.find(UserEntity.class, username) != null) {</span>
 <span class="fc" id="L35">            return false;</span>
         }
 
-<span class="fc" id="L38">        UserEntity user = new UserEntity();</span>
-<span class="fc" id="L39">        user.setUsername(username);</span>
-<span class="fc" id="L40">        user.setPassword(hashedPassword);</span>
-<span class="fc" id="L41">        user.setRoles(Collections.singleton(&quot;USER&quot;));</span>
-<span class="fc" id="L42">        user.setEnabled(true);</span>
+<span class="fc" id="L38">        String hashed = passwordEncoder.encode(password);</span>
 
-<span class="fc" id="L44">        entityManager.persist(user);</span>
+<span class="fc" id="L40">        UserEntity user = new UserEntity();</span>
+<span class="fc" id="L41">        user.setEmail(email);</span>
+<span class="fc" id="L42">        user.setGivenName(givenName);</span>
+<span class="fc" id="L43">        user.setFamilyName(familyName);</span>
+<span class="fc" id="L44">        user.setPassword(hashed);</span>
+<span class="fc" id="L45">        user.setRoles(Collections.singleton(&quot;USER&quot;));</span>
+<span class="fc" id="L46">        user.setEnabled(true);</span>
 
-<span class="fc" id="L46">        return true;</span>
+<span class="fc" id="L48">        entityManager.persist(user);</span>
+
+<span class="fc" id="L50">        return true;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
