@@ -26,7 +26,7 @@ public abstract class SeleniumTestBase {
     private static final AtomicInteger counter = new AtomicInteger(0);
 
     private String getUniqueId() {
-        return "foo_SeleniumLocalIT_" + counter.getAndIncrement();
+        return "foo_SeleniumLocalIT_" + counter.getAndIncrement() + "@mail.com";
     }
 
 
@@ -83,11 +83,11 @@ public abstract class SeleniumTestBase {
     }
 
     @Test
-    public void placeholderButtonVisibleWhenLoggedIn() {
+    public void testLoggedInDivVisibleWhenLoggedIn() {
 
-        assertFalse(home.buttonToPlaceholderVisible());
+        assertFalse(home.loggedInContentVisible());
         createNewUser(getUniqueId(), "given test", "family test", "password");
-        assertTrue(home.buttonToPlaceholderVisible());
+        assertTrue(home.loggedInContentVisible());
     }
 
 

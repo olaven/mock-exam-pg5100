@@ -32,11 +32,11 @@ public class IndexPO extends LayoutPO {
         return title.contains("Welcome");
     }
 
-    public boolean buttonToPlaceholderVisible() {
+    public boolean loggedInContentVisible() {
 
         try {
             return getDriver()
-                    .findElement(By.xpath("//input[@id='goToCounterPageButton']"))
+                    .findElement(By.xpath("//div[@id='loggedInContent']"))
                     .isDisplayed();
         } catch (NoSuchElementException e) {
             return false;

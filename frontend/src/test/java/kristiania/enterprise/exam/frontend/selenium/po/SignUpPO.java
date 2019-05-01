@@ -28,6 +28,9 @@ public class SignUpPO extends LayoutPO{
 
         clickAndWait("submitBtnId");
 
+        String title = getDriver().getTitle();
+        System.out.println(title);
+
         IndexPO po = new IndexPO(this);
         if(po.isOnPage()){
             return po;
