@@ -25,9 +25,10 @@ public class ServiceTestBase {
     @Autowired
     protected TripService tripService;
     @Autowired
-    private ResetService resetService;
+    protected LocationService locationService;
+
     @Autowired
-    private LocationService locationService;
+    private ResetService resetService;
 
 
     @BeforeEach
@@ -47,6 +48,15 @@ public class ServiceTestBase {
 
         userService.createUser(email,givenName, familyName, password);
         return email;
+    }
+
+    protected Long persistLocation() {
+
+        String name = "Test location";
+        String testDescription = "An amazing playground for new features";
+        Long id = locationService.createLocation(name, testDescription);
+
+        return id;
     }
 
     protected Long persistDefaultTrip() {

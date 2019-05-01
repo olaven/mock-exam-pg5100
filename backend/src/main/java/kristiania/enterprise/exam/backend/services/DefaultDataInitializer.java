@@ -105,7 +105,7 @@ public class DefaultDataInitializer {
 
         attempt(() -> userService.bookTrip("spider@man.com", easterInLondon));
         attempt(() -> userService.bookTrip("dev@mail.com", easterInLondon));
-        
+
         attempt(() -> userService.bookTrip("black@widow.com", christmasInLondon));
         attempt(() -> userService.bookTrip("spider@man.com", christmasInLondon));
 

@@ -1,17 +1,18 @@
 package kristiania.enterprise.exam.backend.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
 
+@NamedQueries({
+        @NamedQuery(name = Location.GET_ALL_LOCATIONS, query =  "select location from Location location")
+})
 @Entity
 public class Location {
 
+    public static final String GET_ALL_LOCATIONS = "GET_ALL_LOCATIONS";
     @GeneratedValue
     @Id
     private Long id;
