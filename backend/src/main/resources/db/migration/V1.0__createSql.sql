@@ -1,8 +1,9 @@
-drop table booking if exists;
-drop table location if exists;
-drop table trip if exists;
-drop table user_entity if exists;
-drop table user_entity_roles if exists;
+drop table if exists booking;
+drop table if exists location;
+drop table if exists trip;
+drop table if exists user_entity;
+drop table if exists user_entity_roles;
+
 drop sequence if exists hibernate_sequence;
 create sequence hibernate_sequence start with 1 increment by 1;
 create table booking (id bigint not null, time_of_purchase date not null, trip_id bigint not null, user_email varchar(255) not null, primary key (id));

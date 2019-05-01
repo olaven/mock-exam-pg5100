@@ -26,6 +26,8 @@ public class ServiceTestBase {
     protected TripService tripService;
     @Autowired
     private ResetService resetService;
+    @Autowired
+    private LocationService locationService;
 
 
     @BeforeEach
@@ -75,11 +77,9 @@ public class ServiceTestBase {
 
     protected Long persistTrip(String locationName, int cost, LocalDate date) {
 
-        Location location = new Location();
+        Long locationId = locationService.createLocation(locationName, "A nice testing ground for new features");
 
-        location.setName(locationName);
-        location.setDescription("A nice testing ground for new features");
-        location.setTrips(new ArrayList<>());
+        Location location = locationService.getLocation(locationId);
         Season season = Season.AUTUMN;
 
 
