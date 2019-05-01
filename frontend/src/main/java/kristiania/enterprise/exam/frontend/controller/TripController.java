@@ -21,9 +21,16 @@ public class TripController {
         return topTrips;
     }
 
+    public List<Trip> getGetAllTrips() {
+
+        List<Trip> trips = tripService.getAllTrips();
+        return trips;
+    }
+
     public String goToDetailsPage() {
 
         // figure out how to pass argument
         return null;
     }
+
 }
