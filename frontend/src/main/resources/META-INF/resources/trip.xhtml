@@ -16,11 +16,11 @@
             <div>
                 Description: <h:outputText value="${trip.description}"/> <br/>
                 Cost <h:outputText value="${trip.cost},-"/> <br/>
-                <h:form method="get">
-                    <f:viewParam name="idInButton" value="#{id}"/>
+                <h:form>
+                    <input type="hidden" name="id" value="#{param['id']}" />
                     <h:commandButton
                             value="Book this trip"
-                            action="#{tripController.bookTrip(idInButton)}"
+                            action="#{tripController.bookTrip(id)}"
                             class="goToDetailsButton btn btn-primary"/>
                 </h:form>
 
