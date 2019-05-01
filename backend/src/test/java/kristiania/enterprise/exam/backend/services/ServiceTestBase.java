@@ -2,7 +2,7 @@ package kristiania.enterprise.exam.backend.services;
 
 import kristiania.enterprise.exam.backend.ResetService;
 import kristiania.enterprise.exam.backend.Season;
-import kristiania.enterprise.exam.backend.entity.LocationEntity;
+import kristiania.enterprise.exam.backend.entity.Location;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,7 +75,7 @@ public class ServiceTestBase {
 
     protected Long persistTrip(String locationName, int cost, LocalDate date) {
 
-        LocationEntity location = new LocationEntity();
+        Location location = new Location();
 
         location.setName(locationName);
         location.setDescription("A nice testing ground for new features");

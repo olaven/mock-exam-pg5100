@@ -1,8 +1,8 @@
 package kristiania.enterprise.exam.backend;
 
-import kristiania.enterprise.exam.backend.entity.BookingEntity;
-import kristiania.enterprise.exam.backend.entity.LocationEntity;
-import kristiania.enterprise.exam.backend.entity.TripEntity;
+import kristiania.enterprise.exam.backend.entity.Booking;
+import kristiania.enterprise.exam.backend.entity.Location;
+import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import org.springframework.stereotype.Service;
 
@@ -29,11 +29,11 @@ public class ResetService {
         Query query = em.createNativeQuery("delete from user_entity_roles");
         query.executeUpdate();
 
-        deleteEntities(BookingEntity.class);
+        deleteEntities(Booking.class);
         deleteEntities(UserEntity.class);
-        deleteEntities(TripEntity.class);
+        deleteEntities(Trip.class);
         deleteEntities(UserEntity.class);
-        deleteEntities(LocationEntity.class);
+        deleteEntities(Location.class);
 
     }
 

@@ -1,8 +1,8 @@
 package kristiania.enterprise.exam.backend.services;
 
 import kristiania.enterprise.exam.backend.Season;
-import kristiania.enterprise.exam.backend.entity.LocationEntity;
-import kristiania.enterprise.exam.backend.entity.TripEntity;
+import kristiania.enterprise.exam.backend.entity.Location;
+import kristiania.enterprise.exam.backend.entity.Trip;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
@@ -19,9 +19,9 @@ public class TripService {
     private EntityManager entityManager;
 
     @Transactional
-    public Long createTrip(String title, String description, int cost, LocationEntity location, Season season, LocalDate date) {
+    public Long createTrip(String title, String description, int cost, Location location, Season season, LocalDate date) {
 
-        TripEntity trip = new TripEntity();
+        Trip trip = new Trip();
 
         trip.setTitle(title);
         trip.setDescription(description);
@@ -38,7 +38,7 @@ public class TripService {
 
     public boolean deleteTrip(Long id) {
 
-        TripEntity trip = entityManager.find(TripEntity.class, id);
+        Trip trip = entityManager.find(Trip.class, id);
         if (trip == null) {
             return false;
         }
@@ -48,45 +48,45 @@ public class TripService {
         return true;
     }
 
-    public TripEntity getTrip(Long id) {
+    public Trip getTrip(Long id) {
 
-        return entityManager.find(TripEntity.class, id);
+        return entityManager.find(Trip.class, id);
     }
 
-    public List<TripEntity> getTopTrips(int n) {
+    public List<Trip> getTopTrips(int n) {
 
-        Query query = entityManager.createNamedQuery(TripEntity.GET_TOP_TRIPS, TripEntity.class);
-        List<TripEntity> results = query.setMaxResults(n).getResultList();
+        Query query = entityManager.createNamedQuery(Trip.GET_TOP_TRIPS, Trip.class);
+        List<Trip> results = query.setMaxResults(n).getResultList();
 
         return results;
     }
 
-    public List<TripEntity> getTripsByLocationName(String locationName) {
+    public List<Trip> getTripsByLocationName(String locationName) {
 
-        Query query = entityManager.createNamedQuery(TripEntity.GET_TRIP_BY_LOCATION_NAME, TripEntity.class);
+        Query query = entityManager.createNamedQuery(Trip.GET_TRIP_BY_LOCATION_NAME, Trip.class);
         query.setParameter("locationName", locationName);
 
         return query.getResultList();
     }
 
-    public List<TripEntity> getTripsByCostLessThan(int max) {
+    public List<Trip> getTripsByCostLessThan(int max) {
 
-        Query query = entityManager.createNamedQuery(TripEntity.GET_TRIP_BY_COST_LESS_THAN, TripEntity.class);
+        Query query = entityManager.createNamedQuery(Trip.GET_TRIP_BY_COST_LESS_THAN, Trip.class);
         query.setParameter("max", max);
 
         return query.getResultList();
     }
 
-    public List<TripEntity> getTripsByCostGreaterThan(int min) {
+    public List<Trip> getTripsByCostGreaterThan(int min) {
 
-        Query query = entityManager.createNamedQuery(TripEntity.GET_TRIP_BY_COST_GREATER_THAN, TripEntity.class);
+        Query query = entityManager.createNamedQuery(Trip.GET_TRIP_BY_COST_GREATER_THAN, Trip.class);
         query.setParameter("min", min);
 
         return query.getResultList();
     }
 
-    public List<TripEntity> getAllTrips() {
+    public List<Trip> getAllTrips() {
 
-        return entityManager.createQuery("select trip from TripEntity  trip ").getResultList();
+        return entityManager.createQuery("select trip from Trip  trip ").getResultList();
     }
 }

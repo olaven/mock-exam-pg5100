@@ -1,6 +1,6 @@
 package kristiania.enterprise.exam.frontend.controller;
 
-import kristiania.enterprise.exam.backend.entity.TripEntity;
+import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,9 +15,9 @@ public class TripController {
     @Autowired
     TripService tripService;
 
-    public List<TripEntity> getTopTrips(int n) {
+    public List<Trip> getTopTrips(int n) {
 
-        List<TripEntity> topTrips = tripService.getTopTrips(n);
+        List<Trip> topTrips = tripService.getTopTrips(n);
         return topTrips;
     }
 

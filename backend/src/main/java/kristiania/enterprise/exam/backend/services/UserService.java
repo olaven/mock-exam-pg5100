@@ -1,15 +1,13 @@
 package kristiania.enterprise.exam.backend.services;
 
-import kristiania.enterprise.exam.backend.entity.BookingEntity;
-import kristiania.enterprise.exam.backend.entity.TripEntity;
+import kristiania.enterprise.exam.backend.entity.Booking;
+import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.time.LocalDate;
@@ -60,9 +58,9 @@ public class UserService {
     public Long bookTrip(String userEmail, Long tripId) {
 
         UserEntity user = find(UserEntity.class, userEmail);
-        TripEntity trip = find(TripEntity.class, tripId);
+        Trip trip = find(Trip.class, tripId);
 
-        BookingEntity booking = new BookingEntity();
+        Booking booking = new Booking();
         booking.setUser(user);
         booking.setTrip(trip);
         booking.setTimeOfPurchase(LocalDate.now());
@@ -71,12 +69,12 @@ public class UserService {
         return booking.getId();
     }
 
-    public List<BookingEntity> getBookings(String userEmail) {
+    public List<Booking> getBookings(String userEmail) {
 
-        Query query = entityManager.createNamedQuery(BookingEntity.GET_BOOKINGS_BY_USER, BookingEntity.class);
+        Query query = entityManager.createNamedQuery(Booking.GET_BOOKINGS_BY_USER, Booking.class);
         query.setParameter("email", userEmail);
 
-        List<BookingEntity> bookings = query.getResultList();
+        List<Booking> bookings = query.getResultList();
         return bookings;
     }
 

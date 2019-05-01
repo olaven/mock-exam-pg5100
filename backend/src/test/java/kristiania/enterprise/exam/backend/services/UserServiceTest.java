@@ -1,6 +1,6 @@
 package kristiania.enterprise.exam.backend.services;
 
-import kristiania.enterprise.exam.backend.entity.BookingEntity;
+import kristiania.enterprise.exam.backend.entity.Booking;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -49,7 +49,7 @@ public class UserServiceTest extends ServiceTestBase {
 
         int countBefore = userService.getBookings(userEmail).size();
         Long bookingId = userService.bookTrip(userEmail, tripId);
-        List<BookingEntity> bookings = userService.getBookings(userEmail);
+        List<Booking> bookings = userService.getBookings(userEmail);
 
 
         boolean found = bookings.stream()

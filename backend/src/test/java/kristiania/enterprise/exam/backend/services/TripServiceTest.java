@@ -1,7 +1,6 @@
 package kristiania.enterprise.exam.backend.services;
 
-import kristiania.enterprise.exam.backend.entity.TripEntity;
-import kristiania.enterprise.exam.backend.entity.UserEntity;
+import kristiania.enterprise.exam.backend.entity.Trip;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,7 +17,7 @@ class TripServiceTest extends ServiceTestBase {
     public void canInsertTrip() {
 
         Long id = persistDefaultTrip();
-        TripEntity trip = tripService.getTrip(id);
+        Trip trip = tripService.getTrip(id);
 
         assertNotNull(trip);
     }
@@ -36,7 +35,7 @@ class TripServiceTest extends ServiceTestBase {
             persistTripWithLocationName(locationName);
         }
 
-        List<TripEntity> retrieved = tripService.getTripsByLocationName(locationName);
+        List<Trip> retrieved = tripService.getTripsByLocationName(locationName);
 
         assertEquals(retrieved.size(), sizeBefore + n);
     }
@@ -59,7 +58,7 @@ class TripServiceTest extends ServiceTestBase {
             persistTripWithCost(invalidCost);
         }
 
-        List<TripEntity> validTrips = tripService.getTripsByCostLessThan(5);
+        List<Trip> validTrips = tripService.getTripsByCostLessThan(5);
         assertEquals(validCount, validTrips.size());
     }
 
@@ -82,7 +81,7 @@ class TripServiceTest extends ServiceTestBase {
             persistTripWithCost(invalidCost);
         }
 
-        List<TripEntity> validTrips = tripService.getTripsByCostGreaterThan(5);
+        List<Trip> validTrips = tripService.getTripsByCostGreaterThan(5);
         assertEquals(validCount, validTrips.size());
     }
 
@@ -104,7 +103,7 @@ class TripServiceTest extends ServiceTestBase {
 
         //NOTE: "unpopular" never booked
 
-        List<TripEntity> topTrips = tripService.getTopTrips(2);
+        List<Trip> topTrips = tripService.getTopTrips(2);
         boolean unpopularFound = topTrips.stream()
                 .filter(trip -> trip.getId().equals(unpopular))
                 .findFirst()

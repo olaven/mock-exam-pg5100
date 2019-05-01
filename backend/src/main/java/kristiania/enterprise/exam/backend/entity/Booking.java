@@ -5,10 +5,10 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(name = BookingEntity.GET_BOOKINGS_BY_USER, query = "select booking from BookingEntity booking where user.email = :email")
+        @NamedQuery(name = Booking.GET_BOOKINGS_BY_USER, query = "select booking from Booking booking where user.email = :email")
 })
 @Entity
-public class BookingEntity {
+public class Booking {
 
     public static final String GET_BOOKINGS_BY_USER = "GET_BOOKINGS_BY_USER";
 
@@ -22,12 +22,12 @@ public class BookingEntity {
 
     @ManyToOne
     @NotNull
-    TripEntity trip;
+    Trip trip;
 
     @NotNull
     private LocalDate timeOfPurchase;
 
-    public BookingEntity() {
+    public Booking() {
     }
 
     public Long getId() {
@@ -46,11 +46,11 @@ public class BookingEntity {
         this.user = user;
     }
 
-    public TripEntity getTrip() {
+    public Trip getTrip() {
         return trip;
     }
 
-    public void setTrip(TripEntity trip) {
+    public void setTrip(Trip trip) {
         this.trip = trip;
     }
 

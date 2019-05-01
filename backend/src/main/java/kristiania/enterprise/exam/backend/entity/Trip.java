@@ -7,13 +7,13 @@ import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(name = TripEntity.GET_TRIP_BY_LOCATION_NAME, query = "select trip from TripEntity trip where trip.location.name = :locationName"),
-        @NamedQuery(name = TripEntity.GET_TRIP_BY_COST_LESS_THAN, query = "select trip from TripEntity trip where trip.cost < :max"),
-        @NamedQuery(name = TripEntity.GET_TRIP_BY_COST_GREATER_THAN, query = "select trip from TripEntity trip where trip.cost > :min"),
-        @NamedQuery(name = TripEntity.GET_TOP_TRIPS, query = "select booking.trip from BookingEntity booking group by booking.trip order by count(booking.user) desc"),
+        @NamedQuery(name = Trip.GET_TRIP_BY_LOCATION_NAME, query = "select trip from Trip trip where trip.location.name = :locationName"),
+        @NamedQuery(name = Trip.GET_TRIP_BY_COST_LESS_THAN, query = "select trip from Trip trip where trip.cost < :max"),
+        @NamedQuery(name = Trip.GET_TRIP_BY_COST_GREATER_THAN, query = "select trip from Trip trip where trip.cost > :min"),
+        @NamedQuery(name = Trip.GET_TOP_TRIPS, query = "select booking.trip from Booking booking group by booking.trip order by count(booking.user) desc"),
 })
 @Entity
-public class TripEntity {
+public class Trip {
 
     public static final String GET_TRIP_BY_LOCATION_NAME = "GET_TRIP_BY_LOCATION_NAME";
     public static final String GET_TRIP_BY_COST_LESS_THAN = "GET_TRIP_BY_COST_LESS_THAN";
@@ -38,7 +38,7 @@ public class TripEntity {
 
     @NotNull
     @ManyToOne(cascade = CascadeType.PERSIST) //do not need to create new locations explicitly
-    private LocationEntity location;
+    private Location location;
 
     @Enumerated(EnumType.STRING)
     private Season season;
@@ -46,7 +46,7 @@ public class TripEntity {
     @Future
     private LocalDate date;
 
-    public TripEntity() { }
+    public Trip() { }
 
     public Long getId() {
         return id;
@@ -80,11 +80,11 @@ public class TripEntity {
         this.cost = cost;
     }
 
-    public LocationEntity getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public void setLocation(LocationEntity location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 

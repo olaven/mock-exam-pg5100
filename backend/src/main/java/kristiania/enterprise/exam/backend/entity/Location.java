@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
-public class LocationEntity {
+public class Location {
 
     @GeneratedValue
     @Id
@@ -26,9 +26,9 @@ public class LocationEntity {
 
     @NotNull
     @OneToMany(mappedBy = "location")
-    private List<TripEntity> trips;
+    private List<Trip> trips;
 
-    public LocationEntity() {
+    public Location() {
     }
 
     public Long getId() {
@@ -55,11 +55,11 @@ public class LocationEntity {
         this.description = description;
     }
 
-    public List<TripEntity> getTrips() {
+    public List<Trip> getTrips() {
         return trips;
     }
 
-    public void setTrips(List<TripEntity> trips) {
+    public void setTrips(List<Trip> trips) {
         this.trips = trips;
     }
 }

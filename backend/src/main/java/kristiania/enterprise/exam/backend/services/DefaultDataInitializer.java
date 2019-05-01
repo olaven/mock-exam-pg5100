@@ -1,14 +1,13 @@
 package kristiania.enterprise.exam.backend.services;
 
 import kristiania.enterprise.exam.backend.Season;
-import kristiania.enterprise.exam.backend.entity.LocationEntity;
+import kristiania.enterprise.exam.backend.entity.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.function.Supplier;
 
 @Service
@@ -39,12 +38,12 @@ public class DefaultDataInitializer {
 
 
         // LOCATIONS (created through cascade)
-        LocationEntity alaska = new LocationEntity();
+        Location alaska = new Location();
         alaska.setName("Alaska");
         alaska.setDescription("Up northernest North America");
         alaska.setTrips(new ArrayList<>());
 
-        LocationEntity netherlands = new LocationEntity();
+        Location netherlands = new Location();
         netherlands.setName("The Netherlands");
         netherlands.setDescription("A flat land with nice buildings, flowers and comfortable climate");
         netherlands.setTrips(new ArrayList<>());
