@@ -1,0 +1,38 @@
+<ui:composition template="layout.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:sec="http://www.springframework.org/security/tags" xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:define name="title">Trip</ui:define>
+    <ui:define name="content">
+
+        <sec:authenticated>
+
+            <c:set var="id" value="#{param['id']}"/> ;
+            <c:set var="trip" value="#{tripController.getTrip(id)}"/>
+
+            <h1> This is the trip page for ${trip.title} - ${id}</h1>
+
+            <div>
+                Description: <h:outputText value="${trip.description}"/> <br/>
+                Cost <h:outputText value="${trip.cost},-"/> <br/>
+                <h:form method="get">
+                    <f:viewParam name="idInButton" value="#{id}"/>
+                    <h:commandButton
+                            value="Book this trip"
+                            action="#{tripController.bookTrip(idInButton)}"
+                            class="goToDetailsButton btn btn-primary"/>
+                </h:form>
+
+            </div>
+
+        </sec:authenticated>
+
+        <sec:anonymous>
+            <p>You must log in</p>
+        </sec:anonymous>
+
+    </ui:define>
+
+</ui:composition>
+

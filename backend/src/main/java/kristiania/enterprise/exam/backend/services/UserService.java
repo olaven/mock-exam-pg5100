@@ -89,4 +89,10 @@ public class UserService {
 
         return entry;
     }
+
+    public UserEntity getUser(String email) {
+
+        UserEntity user = entityManager.find(UserEntity.class, email);
+        return user;
+    }
 }

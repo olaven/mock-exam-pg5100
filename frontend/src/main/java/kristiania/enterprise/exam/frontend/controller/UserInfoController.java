@@ -16,7 +16,7 @@ NOTE: This file is copied from:
 public class UserInfoController {
 
 
-    public String getUserName(){
+    public String getUserEmail(){
         return ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
     }
 }
