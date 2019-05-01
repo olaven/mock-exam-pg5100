@@ -69,13 +69,12 @@ public class UserService {
         return booking.getId();
     }
 
-    public List<Booking> getBookings(String userEmail) {
+    public List<Trip> getBookedTrips(String userEmail) {
 
-        Query query = entityManager.createNamedQuery(Booking.GET_BOOKINGS_BY_USER, Booking.class);
+        Query query = entityManager.createNamedQuery(Booking.GET_TRIPS_BOOKED_BY_USER, Trip.class);
         query.setParameter("email", userEmail);
 
-        List<Booking> bookings = query.getResultList();
-        return bookings;
+        return query.getResultList();
     }
 
 

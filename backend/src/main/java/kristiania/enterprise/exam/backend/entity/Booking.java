@@ -5,12 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(name = Booking.GET_BOOKINGS_BY_USER, query = "select booking from Booking booking where user.email = :email")
+        @NamedQuery(name = Booking.GET_TRIPS_BOOKED_BY_USER, query = "select booking.trip from Booking booking where booking.user.email = :email")
 })
 @Entity
 public class Booking {
 
-    public static final String GET_BOOKINGS_BY_USER = "GET_BOOKINGS_BY_USER";
+    public static final String GET_TRIPS_BOOKED_BY_USER = "GET_TRIPS_BOOKED_BY_USER";
 
     @Id
     @GeneratedValue

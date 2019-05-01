@@ -1,5 +1,6 @@
 package kristiania.enterprise.exam.frontend.controller;
 
+import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import kristiania.enterprise.exam.backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /*
 NOTE: This file is copied from:
@@ -29,5 +32,11 @@ public class UserInfoController {
 
     public String getUserEmail(){
         return ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
+    }
+
+    public List<Trip> getBookedTrips() {
+
+        String email = getUserEmail();
+        return userService.getBookedTrips(email);
     }
 }
