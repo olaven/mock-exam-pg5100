@@ -1,5 +1,8 @@
 package kristiania.enterprise.exam.frontend.controller;
 
+import kristiania.enterprise.exam.backend.entity.UserEntity;
+import kristiania.enterprise.exam.backend.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -15,6 +18,14 @@ NOTE: This file is copied from:
 @RequestScoped
 public class UserInfoController {
 
+    @Autowired
+    private UserService userService;
+
+    public UserEntity getUser() {
+
+        String email = getUserEmail();
+        return userService.getUser(email);
+    }
 
     public String getUserEmail(){
         return ((UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUsername();
