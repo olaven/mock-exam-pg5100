@@ -5,7 +5,6 @@ import kristiania.enterprise.exam.backend.entity.LocationEntity;
 import kristiania.enterprise.exam.backend.entity.TripEntity;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -54,6 +53,14 @@ public class TripService {
         return entityManager.find(TripEntity.class, id);
     }
 
+    public List<TripEntity> getTopTrips(int n) {
+
+        Query query = entityManager.createNamedQuery(TripEntity.GET_TOP_TRIPS, TripEntity.class);
+        List<TripEntity> results = query.setMaxResults(n).getResultList();
+
+        return results;
+    }
+
     public List<TripEntity> getTripsByLocationName(String locationName) {
 
         Query query = entityManager.createNamedQuery(TripEntity.GET_TRIP_BY_LOCATION_NAME, TripEntity.class);
@@ -76,5 +83,10 @@ public class TripService {
         query.setParameter("min", min);
 
         return query.getResultList();
+    }
+
+    public List<TripEntity> getAllTrips() {
+
+        return entityManager.createQuery("select trip from TripEntity  trip ").getResultList();
     }
 }

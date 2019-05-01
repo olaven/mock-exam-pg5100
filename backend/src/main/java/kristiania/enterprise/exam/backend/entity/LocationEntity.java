@@ -21,7 +21,7 @@ public class LocationEntity {
     private String name;
 
     @NotBlank
-    @Size(max = 55)
+    @Size(max = 350)
     private String description;
 
     @NotNull

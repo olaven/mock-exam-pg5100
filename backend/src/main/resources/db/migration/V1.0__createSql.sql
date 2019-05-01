@@ -6,7 +6,7 @@ drop table user_entity_roles if exists;
 drop sequence if exists hibernate_sequence;
 create sequence hibernate_sequence start with 1 increment by 1;
 create table booking_entity (id bigint not null, time_of_purchase date not null, trip_id bigint not null, user_email varchar(255) not null, primary key (id));
-create table location_entity (id bigint not null, description varchar(55), name varchar(55), primary key (id));
+create table location_entity (id bigint not null, description varchar(350), name varchar(55), primary key (id));
 create table trip_entity (id bigint not null, cost integer not null check (cost>=0), date date, description varchar(150), season varchar(255), title varchar(55), location_id bigint not null, primary key (id));
 create table user_entity (email varchar(255) not null, enabled boolean not null, family_name varchar(55), given_name varchar(55), password varchar(340), primary key (email));
 create table user_entity_roles (user_entity_email varchar(255) not null, roles varchar(255));
