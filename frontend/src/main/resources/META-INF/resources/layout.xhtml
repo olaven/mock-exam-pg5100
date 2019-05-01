@@ -24,6 +24,9 @@
 
         <h:button id="goHomeButton" outcome="/index.jsf" value="Go home" class="btn btn-dark"/>
 
+        <sec:authenticated>
+            <h:button id="goToProfileBUtton" outcome="/profile.jsf" value="Go to profile" class="btn btn-dark"/>
+        </sec:authenticated>
         <sec:anonymous>
             <div class="navbar navbar-expand-lg">
                 <h:button id="loginBtnId" outcome="/login.jsf" value="Log In" class="btn btn-dark"/>

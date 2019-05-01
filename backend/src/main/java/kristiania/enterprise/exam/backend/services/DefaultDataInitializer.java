@@ -39,8 +39,15 @@ public class DefaultDataInitializer {
 
         // USERS
         attempt(() -> userService.createUser("dev@mail.com", "dev-given", "dev-family", "dev"));
+        attempt(() -> userService.createUser("none@booked.com", "givennothing", "familynothing", "dev"));
         attempt(() -> userService.createUser("iron@man.com", "Tony", "Stark", "suit"));
         attempt(() -> userService.createUser("spider@man.com", "Peter", "Parker", "nyc"));
+        attempt(() -> userService.createUser("black@widow.com", "Scarlet", "Johanson", "secret"));
+        attempt(() -> userService.createUser("thor@valhal.com", "Thor", "Odins Son", "rainbowroad"));
+        attempt(() -> userService.createUser("hulk@green.com", "Robert", "Banner", "sumo-goblin"));
+        attempt(() -> userService.createUser("captain@america.com", "Steven", "Rogers", "Betsy Ross"));
+        attempt(() -> userService.createUser("hawk@eye.com", "Clinton", "Barton", "arrow-to-the-knee"));
+
 
 
         // LOCATIONS
@@ -69,19 +76,19 @@ public class DefaultDataInitializer {
 
         // BOOKINGS
         attempt(() -> userService.bookTrip("dev@mail.com", christmasInAlaska));
-        attempt(() -> userService.bookTrip("dev@mail.com", christmasInAlaska));
+        attempt(() -> userService.bookTrip("black@widow.com", christmasInAlaska));
 
         attempt(() -> userService.bookTrip("dev@mail.com", easterInTheNetherlands));
         attempt(() -> userService.bookTrip("iron@man.com", easterInTheNetherlands));
         attempt(() -> userService.bookTrip("spider@man.com", easterInTheNetherlands));
-        attempt(() -> userService.bookTrip("dev@mail.com", easterInTheNetherlands));
+        attempt(() -> userService.bookTrip("black@widow.com", easterInTheNetherlands));
         attempt(() -> userService.bookTrip("dev@mail.com", easterInTheNetherlands));
 
         attempt(() -> userService.bookTrip("dev@mail.com", netherlandsAutumn));
         attempt(() -> userService.bookTrip("iron@man.com", netherlandsAutumn));
         attempt(() -> userService.bookTrip("spider@man.com", netherlandsAutumn));
-        attempt(() -> userService.bookTrip("spider@man.com", netherlandsAutumn));
-        attempt(() -> userService.bookTrip("dev@mail.com", netherlandsAutumn));
+        attempt(() -> userService.bookTrip("black@widow.com", netherlandsAutumn));
+        attempt(() -> userService.bookTrip("thor@valhal.com", netherlandsAutumn));
 
         attempt(() -> userService.bookTrip("dev@mail.com", summerInAlaska));
         attempt(() -> userService.bookTrip("spider@man.com", summerInAlaska));
@@ -89,25 +96,25 @@ public class DefaultDataInitializer {
 
         attempt(() -> userService.bookTrip("spider@man.com", norwegianSpring));
         attempt(() -> userService.bookTrip("dev@mail.com", norwegianSpring));
-        attempt(() -> userService.bookTrip("dev@mail.com", norwegianSpring));
+        attempt(() -> userService.bookTrip("thor@valhal.com", norwegianSpring));
 
         attempt(() -> userService.bookTrip("spider@man.com", skiingInNorway));
         attempt(() -> userService.bookTrip("dev@mail.com", skiingInNorway));
 
         attempt(() -> userService.bookTrip("spider@man.com", visitOslo));
         attempt(() -> userService.bookTrip("dev@mail.com", visitOslo));
-        attempt(() -> userService.bookTrip("dev@mail.com", visitOslo));
-        attempt(() -> userService.bookTrip("dev@mail.com", visitOslo));
+        attempt(() -> userService.bookTrip("hulk@green.com", visitOslo));
+        attempt(() -> userService.bookTrip("black@widow.com", visitOslo));
 
         attempt(() -> userService.bookTrip("spider@man.com", easterInLondon));
         attempt(() -> userService.bookTrip("dev@mail.com", easterInLondon));
 
         attempt(() -> userService.bookTrip("dev@mail.com", christmasInLondon));
-        attempt(() -> userService.bookTrip("dev@mail.com", christmasInLondon));
-        attempt(() -> userService.bookTrip("dev@mail.com", christmasInLondon));
+        attempt(() -> userService.bookTrip("black@widow.com", christmasInLondon));
+        attempt(() -> userService.bookTrip("spider@man.com", christmasInLondon));
 
         attempt(() -> userService.bookTrip("dev@mail.com", halloweenInLondon));
-        attempt(() -> userService.bookTrip("dev@mail.com", halloweenInLondon));
+        attempt(() -> userService.bookTrip("iron@man.com", halloweenInLondon));
 
     }
 
