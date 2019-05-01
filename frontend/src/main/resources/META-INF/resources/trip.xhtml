@@ -18,10 +18,17 @@
                 Cost <h:outputText value="${trip.cost},-"/> <br/>
                 <h:form>
                     <input type="hidden" name="id" value="#{param['id']}" />
-                    <h:commandButton
-                            value="Book this trip"
-                            action="#{tripController.bookTrip(id)}"
-                            class="goToDetailsButton btn btn-primary"/>
+                    <c:choose>
+                        <c:when test="${userInfoController.hasBookedTrip(id)}">
+                            You have booked this trip!
+                        </c:when>
+                        <c:otherwise>
+                            <h:commandButton
+                                    value="Book this trip"
+                                    action="#{tripController.bookTrip(id)}"
+                                    class="goToDetailsButton btn btn-primary"/>
+                        </c:otherwise>
+                    </c:choose>
                 </h:form>
 
             </div>

@@ -39,4 +39,12 @@ public class UserInfoController {
         String email = getUserEmail();
         return userService.getBookedTrips(email);
     }
+
+    public boolean hasBookedTrip(String idAsString) {
+
+        String email = getUserEmail();
+        Long id = Long.valueOf(idAsString);
+
+        return userService.userHasBooked(email, id);
+    }
 }

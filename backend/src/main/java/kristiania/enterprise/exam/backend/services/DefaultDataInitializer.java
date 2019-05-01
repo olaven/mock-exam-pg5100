@@ -75,7 +75,6 @@ public class DefaultDataInitializer {
 
 
         // BOOKINGS
-        attempt(() -> userService.bookTrip("dev@mail.com", christmasInAlaska));
         attempt(() -> userService.bookTrip("black@widow.com", christmasInAlaska));
 
         attempt(() -> userService.bookTrip("dev@mail.com", easterInTheNetherlands));
@@ -99,21 +98,17 @@ public class DefaultDataInitializer {
         attempt(() -> userService.bookTrip("thor@valhal.com", norwegianSpring));
 
         attempt(() -> userService.bookTrip("spider@man.com", skiingInNorway));
-        attempt(() -> userService.bookTrip("dev@mail.com", skiingInNorway));
 
         attempt(() -> userService.bookTrip("spider@man.com", visitOslo));
-        attempt(() -> userService.bookTrip("dev@mail.com", visitOslo));
         attempt(() -> userService.bookTrip("hulk@green.com", visitOslo));
         attempt(() -> userService.bookTrip("black@widow.com", visitOslo));
 
         attempt(() -> userService.bookTrip("spider@man.com", easterInLondon));
         attempt(() -> userService.bookTrip("dev@mail.com", easterInLondon));
-
-        attempt(() -> userService.bookTrip("dev@mail.com", christmasInLondon));
+        
         attempt(() -> userService.bookTrip("black@widow.com", christmasInLondon));
         attempt(() -> userService.bookTrip("spider@man.com", christmasInLondon));
 
-        attempt(() -> userService.bookTrip("dev@mail.com", halloweenInLondon));
         attempt(() -> userService.bookTrip("iron@man.com", halloweenInLondon));
 
     }

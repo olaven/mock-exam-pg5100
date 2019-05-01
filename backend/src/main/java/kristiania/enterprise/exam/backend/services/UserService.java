@@ -13,6 +13,7 @@ import javax.persistence.Query;
 import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /*
  * NOTE: This file is coped from:
@@ -75,6 +76,17 @@ public class UserService {
         query.setParameter("email", userEmail);
 
         return query.getResultList();
+    }
+
+    public boolean userHasBooked(String userEmail, Long tripId) {
+
+        List<Trip> trips = getBookedTrips(userEmail);
+        boolean found = trips.stream()
+                .map(trip -> trip.getId())
+                .collect(Collectors.toList())
+                .contains(tripId);
+
+        return found;
     }
 
 
