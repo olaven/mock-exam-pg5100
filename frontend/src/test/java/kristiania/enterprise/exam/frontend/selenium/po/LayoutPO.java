@@ -3,6 +3,7 @@ package kristiania.enterprise.exam.frontend.selenium.po;
 import kristiania.enterprise.exam.frontend.selenium.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testcontainers.shaded.org.apache.commons.lang.NotImplementedException;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -46,6 +47,11 @@ public abstract class LayoutPO extends PageObject {
 
         return getDriver().findElements(By.id("logoutBtnId")).size() > 0 &&
                 getDriver().findElements((By.id("signupBtnId"))).isEmpty();
+    }
+
+    public void goToProfilePage() {
+
+        clickAndWait("goToProfileButton");
     }
 }
 

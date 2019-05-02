@@ -1,7 +1,9 @@
 package kristiania.enterprise.exam.frontend.selenium;
 
 import kristiania.enterprise.exam.frontend.selenium.po.IndexPO;
+import kristiania.enterprise.exam.frontend.selenium.po.ProfilePO;
 import kristiania.enterprise.exam.frontend.selenium.po.SignUpPO;
+import kristiania.enterprise.exam.frontend.selenium.po.TripPO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -68,7 +70,7 @@ public abstract class SeleniumTestBase {
 
         String email = getUniqueId();
         String givenName = "given test";
-        String familyName = "famiy test";
+        String familyName = "family test";
         String password = "123456789";
 
         home = createNewUser(email, givenName, familyName, password);
@@ -91,5 +93,56 @@ public abstract class SeleniumTestBase {
     }
 
 
+    @Test
+    public void testDefaultTrips() {
+
+        int n = 5;
+        home = createNewUser(getUniqueId(), "test given", "test family", "test password");
+        assertTrue(home.isOnPage());
+
+        int defaultTripsAmount = home.getAmountOfAllTrips();
+        assertTrue(defaultTripsAmount > n);
+    }
+
+    @Test
+    public void testDisplayTripDetails() {
+
+        home = createNewUser(getUniqueId(), "test given", "test family", "test password");
+        assertTrue(home.isLoggedIn());
+
+        home.goToDetailsOfTrip(0);
+        TripPO trip = new TripPO(home);
+
+        assertTrue(trip.isOnPage());
+        trip.bookTrip();//TODO: FIX ME, cannot find button for booking 
+
+        trip.goToProfilePage();
+        ProfilePO profile = new ProfilePO(trip);
+
+        assertTrue(profile.isOnPage());
+
+        assertEquals(1, profile.getAmountOfBookedTrips());
+    }
+
+
+    @Test
+    public void testDisplayUserInfo() {
+
+        String email = getUniqueId();
+        String givenName = "test given";
+        String familyName = "test family";
+        String password = "test password";
+
+        home = createNewUser(email, givenName, familyName, password);
+        assertTrue(home.isLoggedIn());
+
+        home.goToProfilePage();
+
+        ProfilePO profile = new ProfilePO(home);
+
+        assertEquals(email, profile.getDisplayedEmail());
+        assertEquals(givenName, profile.getDisplayedGivenName());
+        assertEquals(familyName, profile.getDisplayedFamliyName());
+    }
 
 }

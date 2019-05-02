@@ -4,6 +4,9 @@ import kristiania.enterprise.exam.frontend.selenium.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 /*
 NOTE: Parts of this file is copied from:
@@ -42,4 +45,27 @@ public class IndexPO extends LayoutPO {
             return false;
         }
     }
+
+
+    public int getAmountOfTopTrips() {
+
+        return getDriver()
+                .findElements(By.xpath("//table[@id='topTripsTable']/tbody/tr"))
+                .size();
+    }
+
+    public int getAmountOfAllTrips() {
+
+        return getDriver()
+                .findElements(By.xpath("//table[@id='allTripsTable']/tbody/tr"))
+                .size();
+    }
+
+    public void goToDetailsOfTrip(int index) {
+
+        WebElement button = getDriver().findElements(By.className("goToDetailsButton")).get(index);
+        button.click();
+        waitForPageToLoad();
+    }
+
 }

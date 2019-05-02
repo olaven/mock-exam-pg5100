@@ -12,9 +12,9 @@
 
             <h1>Profile of <h:outputText value="${user.givenName} ${user.familyName}"/></h1>
 
-            First name: <h:outputText value="${user.givenName}"/> <br/>
-            Last name: <h:outputText value="${user.familyName}"/> <br/>
-            Email: <h:outputText value="${user.email}"/> <br/>
+            First name: <h:outputText id="profileGivenName" value="${user.givenName}"/> <br/>
+            Last name: <h:outputText id="profileFamilyName" value="${user.familyName}"/> <br/>
+            Email: <h:outputText id="profileEmail" value="${user.email}"/> <br/>
 
             <div>
                 <c:choose>

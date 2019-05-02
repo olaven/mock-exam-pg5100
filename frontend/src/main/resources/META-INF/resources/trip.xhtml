@@ -11,11 +11,11 @@
             <c:set var="id" value="#{param['id']}"/> ;
             <c:set var="trip" value="#{tripController.getTrip(id)}"/>
 
-            <h1> This is the trip page for ${trip.title} - ${id}</h1>
+            <h1 id="tripTitle"> This is the trip page for ${trip.title} - ${id}</h1>
 
             <div>
-                Description: <h:outputText value="${trip.description}"/> <br/>
-                Cost <h:outputText value="${trip.cost},-"/> <br/>
+                Description: <h:outputText id="tripDescription" value="${trip.description}"/> <br/>
+                Cost <h:outputText id="tripCost" value="${trip.cost},-"/> <br/>
                 <h:form>
                     <input type="hidden" name="id" value="#{param['id']}" />
                     <c:choose>
@@ -24,6 +24,7 @@
                         </c:when>
                         <c:otherwise>
                             <h:commandButton
+                                    id="bookButton"
                                     value="Book this trip"
                                     action="#{tripController.bookTrip(id)}"
                                     class="goToDetailsButton btn btn-primary"/>
