@@ -174,6 +174,64 @@ class TripServiceTest extends ServiceTestBase {
         assertTrue(secondIsSecond);
     }
 
+    @Test
+    public void canDeleteTrip() {
+
+        Long id = persistDefaultTrip();
+        assertNotNull(tripService.getTrip(id));
+
+        tripService.deleteTrip(id);
+        assertNull(tripService.getTrip(id));
+    }
+
+    @Test
+    public void testCannotDeleteTripIfNotExists() {
+
+        // NOTE: no trip persisted
+        boolean deleted = tripService.deleteTrip(-1l);
+        assertFalse(deleted);
+    }
+
+    @Test
+    public void canGetByTitleNameAndQuery() {
+
+        Long locationId = persistLocation();
+        String locationName = locationService.getLocation(locationId).getName();
+        String query = "a";
+
+        // Find these four
+        persistTripWithTitleAndLocationName("a", locationName);
+        persistTripWithTitleAndLocationName("ba", locationName);
+        persistTripWithTitleAndLocationName("aa", locationName);
+        persistTripWithTitleAndLocationName("bA", locationName);
+
+        // Do NOT find these four
+        persistTripWithTitleAndLocationName("n", locationName);
+        persistTripWithTitleAndLocationName("o", locationName);
+        persistTripWithTitleAndLocationName("n", locationName);
+        persistTripWithTitleAndLocationName("e", locationName);
+
+        List<Trip> results = tripService.getTripsByLocatioNameAndTitleQuery(locationName, query);
+        results.forEach(result -> {
+            assertTrue(result.getTitle().contains(query));
+        });
+
+    }
+
+
+    @Test
+    public void canGetAllTrips() {
+
+        assertEquals(0, tripService.getAllTrips().size());
+        int n = 10;
+
+        for (int i = 0; i < n; i++) {
+            persistDefaultTrip();
+        }
+
+        int count = tripService.getAllTrips().size();
+        assertEquals(n, count);
+    }
 
 
 }

@@ -37,13 +37,13 @@ public class TripService {
     }
 
 
+    @Transactional
     public boolean deleteTrip(Long id) {
 
         Trip trip = entityManager.find(Trip.class, id);
         if (trip == null) {
             return false;
         }
-
 
         entityManager.remove(trip);
         return true;

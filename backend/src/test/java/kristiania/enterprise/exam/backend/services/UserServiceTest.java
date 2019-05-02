@@ -2,6 +2,7 @@ package kristiania.enterprise.exam.backend.services;
 
 import kristiania.enterprise.exam.backend.entity.Booking;
 import kristiania.enterprise.exam.backend.entity.Trip;
+import kristiania.enterprise.exam.backend.entity.UserEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -78,11 +79,41 @@ public class UserServiceTest extends ServiceTestBase {
     @Test
     public void testThrowsOnInvalidTripId() {
 
-        Long tripId = persistDefaultTrip();
         String userEmail = persistUser();
 
         assertThrows(Exception.class, () -> {
             userService.bookTrip(userEmail,-1l);
         });
+    }
+
+    @Test
+    public void canCheckIfUserHasBooked() {
+
+        String userEmail = persistUser();
+        Long tripId = persistDefaultTrip();
+
+        userService.bookTrip(userEmail, tripId);
+        boolean booked = userService.userHasBooked(userEmail, tripId);
+        assertTrue(booked);
+    }
+
+    @Test
+    public void canCheckIfUserHasNotBooked() {
+
+        String userEmail = persistUser();
+        Long tripId = persistDefaultTrip();
+
+        //NOTE: never booked
+        boolean booked = userService.userHasBooked(userEmail, tripId);
+        assertFalse(booked);
+    }
+
+    @Test
+    public void canRetrieveUser() {
+
+        String userEmail = persistUser();
+        UserEntity user = userService.getUser(userEmail);
+
+        assertEquals(userEmail, user.getEmail());
     }
 }

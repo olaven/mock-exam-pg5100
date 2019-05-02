@@ -61,31 +61,40 @@ public class ServiceTestBase {
 
     protected Long persistDefaultTrip() {
 
-
+        String title = "title, default";
         String locationName = "default location name";
         int cost = new Random().nextInt(500);
         LocalDate date = LocalDate.now().plusMonths(1);
 
-       return persistTrip(locationName, cost, date);
+       return persistTrip(title, locationName, cost, date);
     }
 
     protected Long persistTripWithLocationName(String locationName) {
 
+        String title = "title, with location name";
         int cost = new Random().nextInt(500);
         LocalDate date = LocalDate.now().plusMonths(1);
 
-        return persistTrip(locationName, cost, date);
+        return persistTrip(title, locationName, cost, date);
     }
 
     protected Long persistTripWithCost(int cost) {
 
+        String title = "title, made with cost";
         String locationName = "default location name";
         LocalDate date = LocalDate.now().plusMonths(1);
 
-        return persistTrip(locationName, cost, date);
+        return persistTrip(title, locationName, cost, date);
     }
 
-    protected Long persistTrip(String locationName, int cost, LocalDate date) {
+    protected Long persistTripWithTitleAndLocationName(String title, String locationName) {
+
+        int cost = new Random().nextInt(500);
+        LocalDate date = LocalDate.now().plusMonths(1);
+        return persistTrip(title, locationName, cost, date);
+    }
+
+    protected Long persistTrip(String title, String locationName, int cost, LocalDate date) {
 
         Long locationId = locationService.createLocation(locationName, "A nice testing ground for new features");
 
@@ -93,7 +102,7 @@ public class ServiceTestBase {
         Season season = Season.AUTUMN;
 
 
-        Long id = tripService.createTrip("Test location", "Default test description", cost, location, season, date);
+        Long id = tripService.createTrip("Test trip-title", "Default test description", cost, location, season, date);
         return id;
     }
 
