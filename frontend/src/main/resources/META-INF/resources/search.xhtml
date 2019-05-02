@@ -1,7 +1,8 @@
 <ui:composition template="layout.xhtml"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:sec="http://www.springframework.org/security/tags" xmlns:f="http://xmlns.jcp.org/jsf/core"
-                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:h="http://java.sun.com/jsf/html">
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
 
     <ui:define name="title">Search</ui:define>
     <ui:define name="content">
@@ -9,12 +10,47 @@
         <sec:authenticated>
 
             <h1>Enter search query:</h1>
-            <h:form>
-                <h:inputText id="search-input" value="#{searchController.currentQuery}"/><br/>
-                <h:selectOneMenu valueChangeListener="#{searchController.locationChangeListener}">
-                    <f:selectItems value="#{searchController.allLocations}" var="location" itemLabel="#{location.name}" itemValue="#{location.id}" itemDescription="test  lael desc"/>
-                </h:selectOneMenu>
-            </h:form>
+            <c:choose>
+                <c:when test="#{searchController.allLocations.size() > 0}">
+                    <h:form>
+                        <c:set var="locations" value="${searchController.allLocations}"/>
+                        <h:inputText id="search-input" value="#{searchController.titleQuery}"/><br/>
+                        <h:selectOneMenu value="#{searchController.locationName}">
+                            <f:selectItem itemLabel="Select a location..." />
+                            <f:selectItems value="#{locations}" var="location" itemLabel="#{location.name}" itemValue="#{location.name}" itemDescription="test  lael desc"/>
+                        </h:selectOneMenu>
+
+                        <p:commandButton value="Do Search" action="#{searchController.doSearch}"/>
+                        <h:outputLabel value="You must enter text and choose location."
+                                       rendered="${!empty param['error']}"/>
+                    </h:form>
+                </c:when>
+                <c:otherwise>
+                    <!-- Should not really happen -->
+                    There are no locations to search amongst. New trips and locations are coming!
+                </c:otherwise>
+            </c:choose>
+            
+            <h:dataTable value="#{searchController.results}" var="trip" id="resultTripsTable" class="table">
+                <h:column>
+                    <f:facet name="header">Title</f:facet>
+                    <h:outputText value="#{trip.title}" />
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Cost</f:facet>
+                    <h:outputText value="#{trip.cost}" class="counter"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Go To Details</f:facet>
+                    <h:form>
+                        <h:commandButton
+                                value="To Details"
+                                action="#{tripController.goToTripPage(trip.id)}"
+                                class="goToDetailsButton btn btn-primary"/>
+                    </h:form>
+                </h:column>
+            </h:dataTable>
+            <h:outputLabel value="No search results.." rendered="#{searchController.results.size() == 0}"/>
         </sec:authenticated>
 
         <sec:anonymous>
