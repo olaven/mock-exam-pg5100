@@ -1,9 +1,6 @@
 package kristiania.enterprise.exam.frontend.selenium;
 
-import kristiania.enterprise.exam.frontend.selenium.po.IndexPO;
-import kristiania.enterprise.exam.frontend.selenium.po.ProfilePO;
-import kristiania.enterprise.exam.frontend.selenium.po.SignUpPO;
-import kristiania.enterprise.exam.frontend.selenium.po.TripPO;
+import kristiania.enterprise.exam.frontend.selenium.po.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -114,7 +111,7 @@ public abstract class SeleniumTestBase {
         TripPO trip = new TripPO(home);
 
         assertTrue(trip.isOnPage());
-        trip.bookTrip();//TODO: FIX ME, cannot find button for booking 
+        trip.bookTrip();
 
         trip.goToProfilePage();
         ProfilePO profile = new ProfilePO(trip);
@@ -143,6 +140,24 @@ public abstract class SeleniumTestBase {
         assertEquals(email, profile.getDisplayedEmail());
         assertEquals(givenName, profile.getDisplayedGivenName());
         assertEquals(familyName, profile.getDisplayedFamliyName());
+    }
+
+    @Test
+    public void testSearch() {
+
+        home = createNewUser(getUniqueId(), "test given", "test fam", "test family");
+        home.goToSearchPage();
+
+        SearchPO search = new SearchPO(home);
+        assertTrue(search.isOnPage());
+
+        assertFalse(search.getDisplayedcount() > 0);
+
+        search.enterQuery("a");
+        search.selectLocation("Alaska");
+        search.doSearch();
+
+        assertTrue(search.getDisplayedcount() > 0);
     }
 
 }

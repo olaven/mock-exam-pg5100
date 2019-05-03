@@ -27,10 +27,9 @@ public class SignUpPO extends LayoutPO{
         setText("passwordTextId", password);
 
         clickAndWait("submitBtnId");
+        waitForPageToLoad();
 
-        String title = getDriver().getTitle();
-        System.out.println(title);
-
+        //TODO: Denne feiler i Docker
         IndexPO po = new IndexPO(this);
         if(po.isOnPage()){
             return po;

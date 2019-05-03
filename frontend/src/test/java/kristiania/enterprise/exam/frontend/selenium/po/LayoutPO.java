@@ -53,5 +53,10 @@ public abstract class LayoutPO extends PageObject {
 
         clickAndWait("goToProfileButton");
     }
+
+    public void goToSearchPage() {
+
+        clickAndWait("goToSearchButton");
+    }
 }
 

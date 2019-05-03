@@ -16,7 +16,7 @@
             <div>
                 Description: <h:outputText id="tripDescription" value="${trip.description}"/> <br/>
                 Cost <h:outputText id="tripCost" value="${trip.cost},-"/> <br/>
-                <h:form>
+                <h:form prependId="false">
                     <input type="hidden" name="id" value="#{param['id']}" />
                     <c:choose>
                         <c:when test="${userInfoController.hasBookedTrip(id)}">
@@ -27,7 +27,7 @@
                                     id="bookButton"
                                     value="Book this trip"
                                     action="#{tripController.bookTrip(id)}"
-                                    class="goToDetailsButton btn btn-primary"/>
+                                    class="btn btn-primary"/>
                         </c:otherwise>
                     </c:choose>
                 </h:form>

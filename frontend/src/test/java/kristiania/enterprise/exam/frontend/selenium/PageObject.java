@@ -55,6 +55,7 @@ public abstract class PageObject {
     }
 
     public void clickAndWait(String id){
+
         WebElement element = driver.findElement(By.id(id));
         element.click();
         waitForPageToLoad();

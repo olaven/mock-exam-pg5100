@@ -150,6 +150,14 @@
             </dependency>
 
             <dependency>
+                <!-- for code coverage -->
+                <groupId>org.jacoco</groupId>
+                <artifactId>org.jacoco.core</artifactId>
+                <version>${version.jacoco}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <!-- to mock web services -->
                 <groupId>com.github.tomakehurst</groupId>
                 <artifactId>wiremock-standalone</artifactId>
@@ -244,9 +252,7 @@
                     <rerunFailingTestsCount>3</rerunFailingTestsCount>
                 </configuration>
             </plugin>
-            <!--
-                   Used to calculate code-coverage of the tests
-               -->
+
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
