@@ -22,7 +22,6 @@ class TripServiceTest extends ServiceTestBase {
         assertNotNull(trip);
     }
 
-    //TODO: tests for all other methods in tripservice
     @Test
     public void canGetTripByLocationName() {
 
@@ -213,7 +212,7 @@ class TripServiceTest extends ServiceTestBase {
 
         List<Trip> results = tripService.getSearchResults(locationName, query);
         results.forEach(result -> {
-            assertTrue(result.getTitle().contains(query));
+            assertTrue(result.getTitle().toLowerCase().contains(query));
         });
     }
 
