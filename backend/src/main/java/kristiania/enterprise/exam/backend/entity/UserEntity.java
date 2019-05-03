@@ -37,6 +37,8 @@ public class UserEntity {
     @Size(max = 340)// Long passwords are a good thing, but I still need to prevent attacks
     private String password;
 
+    private ShoppingCart shoppingCart;
+
     @ElementCollection
     private Set<String> roles;
 
@@ -78,6 +80,13 @@ public class UserEntity {
         this.password = password;
     }
 
+    public ShoppingCart getShoppingCart() {
+        return shoppingCart;
+    }
+
+    public void setShoppingCart(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
+    }
 
     public Set<String> getRoles() {
         return roles;

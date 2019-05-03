@@ -1,6 +1,7 @@
 package kristiania.enterprise.exam.backend.services;
 
 import kristiania.enterprise.exam.backend.entity.Booking;
+import kristiania.enterprise.exam.backend.entity.ShoppingCart;
 import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +10,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,9 +31,11 @@ import java.util.stream.Collectors;
 public class UserService {
 
     @Autowired
+    private ShoppingCartService shoppingCartService;
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
+    @PersistenceContext
     private EntityManager entityManager;
 
     public boolean createUser(String email, String givenName, String familyName, String password) {
