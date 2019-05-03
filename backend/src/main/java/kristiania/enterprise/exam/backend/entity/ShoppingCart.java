@@ -4,18 +4,30 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@Embeddable
+@Entity
 public class ShoppingCart {
 
     @Id
+    @GeneratedValue
+    Long id;
+
+    //NOTE: @Id is not allowed on OneToOne/similar
     @OneToOne(mappedBy = "shoppingCart")
     private UserEntity user;
 
     @NotNull
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Trip> trips;
 
     public ShoppingCart() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public UserEntity getUser() {

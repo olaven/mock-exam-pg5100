@@ -1,8 +1,8 @@
 package kristiania.enterprise.exam.backend.entity;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import org.hibernate.annotations.Fetch;
+
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -37,6 +37,7 @@ public class UserEntity {
     @Size(max = 340)// Long passwords are a good thing, but I still need to prevent attacks
     private String password;
 
+    @OneToOne
     private ShoppingCart shoppingCart;
 
     @ElementCollection

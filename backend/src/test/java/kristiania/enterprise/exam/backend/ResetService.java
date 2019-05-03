@@ -1,9 +1,6 @@
 package kristiania.enterprise.exam.backend;
 
-import kristiania.enterprise.exam.backend.entity.Booking;
-import kristiania.enterprise.exam.backend.entity.Location;
-import kristiania.enterprise.exam.backend.entity.Trip;
-import kristiania.enterprise.exam.backend.entity.UserEntity;
+import kristiania.enterprise.exam.backend.entity.*;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Entity;
@@ -31,8 +28,8 @@ public class ResetService {
 
         deleteEntities(Booking.class);
         deleteEntities(UserEntity.class);
+        deleteEntities(ShoppingCart.class);
         deleteEntities(Trip.class);
-        deleteEntities(UserEntity.class);
         deleteEntities(Location.class);
 
     }

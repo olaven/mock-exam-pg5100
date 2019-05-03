@@ -28,6 +28,9 @@ public class ServiceTestBase {
     @Autowired
     protected LocationService locationService;
     @Autowired
+    protected ShoppingCartService shoppingCartService;
+
+    @Autowired
     private ResetService resetService;
 
 
