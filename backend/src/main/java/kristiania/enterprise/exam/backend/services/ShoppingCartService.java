@@ -3,8 +3,11 @@ package kristiania.enterprise.exam.backend.services;
 import kristiania.enterprise.exam.backend.entity.ShoppingCart;
 import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
+import sun.security.provider.SHA;
 
+import javax.net.ssl.SNIHostName;
 import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,6 +18,9 @@ public class ShoppingCartService {
 
     @PersistenceContext
     private EntityManager entityManager;
+
+    @Autowired
+    private UserService userService;
 
     @Async
     public void addToShoppingCart(UserEntity user, Trip trip) {
@@ -31,8 +37,25 @@ public class ShoppingCartService {
         entityManager.merge(shoppingCart);
     }
 
-    //TODO: implement booking all items
-    //TODO: implement removing items
+    @Async
+    public void bookAllItems(UserEntity user) {
+
+        ShoppingCart shoppingCart = entityManager.find(ShoppingCart.class, user);
+        shoppingCart.getTrips().forEach(trip -> {
+
+            userService.bookTrip(user.getEmail(), trip.getId());
+        });
+
+        shoppingCart.setTrips(new ArrayList<>());
+    }
+
+    @Async
+    public void emptyShoppingCart(UserEntity user) {
+
+        ShoppingCart shoppingCart = entityManager.find(ShoppingCart.class, user);
+        shoppingCart.setTrips(new ArrayList<>());
+    }
+    
     //TODO: Write tests
     //TODO: implement frontend (separate from direct booking)
 
