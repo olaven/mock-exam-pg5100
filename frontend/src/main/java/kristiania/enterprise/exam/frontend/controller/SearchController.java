@@ -5,8 +5,6 @@ import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.services.LocationService;
 import kristiania.enterprise.exam.backend.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
 import javax.inject.Named;
@@ -37,7 +35,7 @@ public class SearchController {
             return "/search.jsf?faces-redirect=true&error=true";
         }
 
-        setResults(tripService.getTripsByLocatioNameAndTitleQuery(locationName, titleQuery));
+        setResults(tripService.getSearchResults(locationName, titleQuery));
         return "/search.jsf?faces-redirect=true";
     }
 

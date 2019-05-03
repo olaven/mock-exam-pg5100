@@ -21,8 +21,10 @@
                         </h:selectOneMenu>
 
                         <p:commandButton id="doSearchButton" value="Do Search" action="#{searchController.doSearch}"/>
-                        <h:outputLabel value="You must enter text and choose location."
-                                       rendered="${!empty param['error']}"/>
+                        <h:outputLabel
+                                id="searchError"
+                                value="You must enter text and choose location."
+                                rendered="${!empty param['error']}"/>
                     </h:form>
                 </c:when>
                 <c:otherwise>

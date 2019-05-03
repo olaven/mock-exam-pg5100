@@ -44,4 +44,15 @@ public class SearchPO extends PageObject {
 
         clickAndWait("doSearchButton");
     }
+
+    public boolean showsError() {
+
+        try {
+            return getDriver()
+                    .findElement(By.id("searchError"))
+                    .isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
 }

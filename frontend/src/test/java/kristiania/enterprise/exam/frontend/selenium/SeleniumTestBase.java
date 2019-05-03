@@ -160,4 +160,47 @@ public abstract class SeleniumTestBase {
         assertTrue(search.getDisplayedcount() > 0);
     }
 
+    @Test
+    public void testNoLocationShowsError() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+        home.goToSearchPage();
+
+        SearchPO search = new SearchPO(home);
+        search.enterQuery("query");
+        // NOTE no location
+        search.doSearch();
+
+        assertTrue(search.showsError());
+    }
+
+    @Test
+    public void testNoQueryShowsError() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+        home.goToSearchPage();
+
+        SearchPO search = new SearchPO(home);
+        // NOTE no query
+        search.selectLocation("Alaska");
+        search.doSearch();
+
+        assertTrue(search.showsError());
+    }
+
+    @Test
+    public void testDoesNotShowErrorOnValidInput() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+        home.goToSearchPage();
+
+        SearchPO search = new SearchPO(home);
+
+        search.enterQuery("a");
+        search.selectLocation("Alaska");
+        search.doSearch();
+
+        assertFalse(search.showsError());
+    }
+
 }

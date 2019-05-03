@@ -3,6 +3,7 @@ package kristiania.enterprise.exam.backend.services;
 import kristiania.enterprise.exam.backend.ResetService;
 import kristiania.enterprise.exam.backend.Season;
 import kristiania.enterprise.exam.backend.entity.Location;
+import net.bytebuddy.asm.Advice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +60,7 @@ public class ServiceTestBase {
         return id;
     }
 
-    protected Long persistDefaultTrip() {
+    protected Long persistTrip() {
 
         String title = "title, default";
         String locationName = "default location name";
@@ -69,7 +70,7 @@ public class ServiceTestBase {
        return persistTrip(title, locationName, cost, date);
     }
 
-    protected Long persistTripWithLocationName(String locationName) {
+    protected Long persistTrip(String locationName) {
 
         String title = "title, with location name";
         int cost = new Random().nextInt(500);
@@ -78,7 +79,7 @@ public class ServiceTestBase {
         return persistTrip(title, locationName, cost, date);
     }
 
-    protected Long persistTripWithCost(int cost) {
+    protected Long persistTrip(int cost) {
 
         String title = "title, made with cost";
         String locationName = "default location name";
@@ -87,7 +88,15 @@ public class ServiceTestBase {
         return persistTrip(title, locationName, cost, date);
     }
 
-    protected Long persistTripWithTitleAndLocationName(String title, String locationName) {
+    protected Long persistTrip(int cost, String location) {
+
+        String title = "title, cost and location";
+        LocalDate date = LocalDate.now().plusMonths(1);
+
+        return persistTrip(title, location, cost, date);
+    }
+
+    protected Long persistTrip(String title, String locationName) {
 
         int cost = new Random().nextInt(500);
         LocalDate date = LocalDate.now().plusMonths(1);
@@ -102,9 +111,10 @@ public class ServiceTestBase {
         Season season = Season.AUTUMN;
 
 
-        Long id = tripService.createTrip("Test trip-title", "Default test description", cost, location, season, date);
+        Long id = tripService.createTrip(title, "Default test description", cost, location, season, date);
         return id;
     }
+
 
 
     /*

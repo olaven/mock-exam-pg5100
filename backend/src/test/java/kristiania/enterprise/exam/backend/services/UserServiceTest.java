@@ -1,6 +1,5 @@
 package kristiania.enterprise.exam.backend.services;
 
-import kristiania.enterprise.exam.backend.entity.Booking;
 import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import org.junit.jupiter.api.Test;
@@ -47,7 +46,7 @@ public class UserServiceTest extends ServiceTestBase {
     public void testCanBookTrip() {
 
         String userEmail = persistUser();
-        Long tripId = persistDefaultTrip();
+        Long tripId = persistTrip();
 
         int countBefore = userService.getBookedTrips(userEmail).size();
         userService.bookTrip(userEmail, tripId);
@@ -69,7 +68,7 @@ public class UserServiceTest extends ServiceTestBase {
     @Test
     public void testThrowsOnInvalidUserEmail() {
 
-        Long tripId = persistDefaultTrip();
+        Long tripId = persistTrip();
 
         assertThrows(Exception.class, () -> {
             userService.bookTrip("not@registered.com", tripId);
@@ -90,7 +89,7 @@ public class UserServiceTest extends ServiceTestBase {
     public void canCheckIfUserHasBooked() {
 
         String userEmail = persistUser();
-        Long tripId = persistDefaultTrip();
+        Long tripId = persistTrip();
 
         userService.bookTrip(userEmail, tripId);
         boolean booked = userService.userHasBooked(userEmail, tripId);
@@ -101,7 +100,7 @@ public class UserServiceTest extends ServiceTestBase {
     public void canCheckIfUserHasNotBooked() {
 
         String userEmail = persistUser();
-        Long tripId = persistDefaultTrip();
+        Long tripId = persistTrip();
 
         //NOTE: never booked
         boolean booked = userService.userHasBooked(userEmail, tripId);

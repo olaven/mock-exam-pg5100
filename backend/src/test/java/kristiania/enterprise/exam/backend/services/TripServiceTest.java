@@ -16,7 +16,7 @@ class TripServiceTest extends ServiceTestBase {
     @Test
     public void canInsertTrip() {
 
-        Long id = persistDefaultTrip();
+        Long id = persistTrip();
         Trip trip = tripService.getTrip(id);
 
         assertNotNull(trip);
@@ -32,7 +32,7 @@ class TripServiceTest extends ServiceTestBase {
         int sizeBefore = tripService.getTripsByLocationName(locationName).size();
 
         for (int i = 0; i < n; i++) {
-            persistTripWithLocationName(locationName);
+            persistTrip(locationName);
         }
 
         List<Trip> retrieved = tripService.getTripsByLocationName(locationName);
@@ -51,11 +51,11 @@ class TripServiceTest extends ServiceTestBase {
         int invalidCount = random.nextInt(10);
 
         for (int i = 0; i < validCount; i++) {
-            persistTripWithCost(validCost);
+            persistTrip(validCost);
         }
 
         for (int i = 0; i < invalidCount; i++) {
-            persistTripWithCost(invalidCost);
+            persistTrip(invalidCost);
         }
 
         List<Trip> validTrips = tripService.getTripsByCostLessThan(5);
@@ -74,11 +74,11 @@ class TripServiceTest extends ServiceTestBase {
         int invalidCount = random.nextInt(10);
 
         for (int i = 0; i < validCount; i++) {
-            persistTripWithCost(validCost);
+            persistTrip(validCost);
         }
 
         for (int i = 0; i < invalidCount; i++) {
-            persistTripWithCost(invalidCost);
+            persistTrip(invalidCost);
         }
 
         List<Trip> validTrips = tripService.getTripsByCostGreaterThan(5);
@@ -89,9 +89,9 @@ class TripServiceTest extends ServiceTestBase {
     public void canGetTopTrips() {
 
         String email = persistUser();
-        Long first = persistDefaultTrip();
-        Long second = persistDefaultTrip();
-        Long unpopular = persistDefaultTrip();
+        Long first = persistTrip();
+        Long second = persistTrip();
+        Long unpopular = persistTrip();
 
         for (int i = 0; i < 5; i++) {
             userService.bookTrip(email, first);
@@ -132,11 +132,11 @@ class TripServiceTest extends ServiceTestBase {
 
         String email = persistUser();
 
-        Long first = persistDefaultTrip();
-        Long second = persistDefaultTrip();
-        Long moderate1 = persistDefaultTrip();
-        Long moderate2 = persistDefaultTrip();
-        Long unpopular = persistDefaultTrip();
+        Long first = persistTrip();
+        Long second = persistTrip();
+        Long moderate1 = persistTrip();
+        Long moderate2 = persistTrip();
+        Long unpopular = persistTrip();
 
         for (int i = 0; i < 5; i++) {
             userService.bookTrip(email, first);
@@ -177,7 +177,7 @@ class TripServiceTest extends ServiceTestBase {
     @Test
     public void canDeleteTrip() {
 
-        Long id = persistDefaultTrip();
+        Long id = persistTrip();
         assertNotNull(tripService.getTrip(id));
 
         tripService.deleteTrip(id);
@@ -200,22 +200,42 @@ class TripServiceTest extends ServiceTestBase {
         String query = "a";
 
         // Find these four
-        persistTripWithTitleAndLocationName("a", locationName);
-        persistTripWithTitleAndLocationName("ba", locationName);
-        persistTripWithTitleAndLocationName("aa", locationName);
-        persistTripWithTitleAndLocationName("bA", locationName);
+        persistTrip("a", locationName);
+        persistTrip("ba", locationName);
+        persistTrip("aa", locationName);
+        persistTrip("bA", locationName);
 
         // Do NOT find these four
-        persistTripWithTitleAndLocationName("n", locationName);
-        persistTripWithTitleAndLocationName("o", locationName);
-        persistTripWithTitleAndLocationName("n", locationName);
-        persistTripWithTitleAndLocationName("e", locationName);
+        persistTrip("n", locationName);
+        persistTrip("o", locationName);
+        persistTrip("n", locationName);
+        persistTrip("e", locationName);
 
-        List<Trip> results = tripService.getTripsByLocatioNameAndTitleQuery(locationName, query);
+        List<Trip> results = tripService.getSearchResults(locationName, query);
         results.forEach(result -> {
             assertTrue(result.getTitle().contains(query));
         });
+    }
 
+    @Test
+    public void testSearchResultsAreOrderedByCost() {
+
+        Long locationId = persistLocation();
+        String locationName = locationService.getLocation(locationId).getName();
+
+        Long first = persistTrip(1, locationName);
+        Long second = persistTrip(2, locationName);
+        Long third = persistTrip(3, locationName);
+        Long fourth = persistTrip(4, locationName);
+
+        // NOTE: all test trips should have titles with "title"
+        List<Trip> results = tripService.getSearchResults(locationName, "title");
+
+        assertEquals(4, results.size());
+        assertEquals(first, results.get(0).getId());
+        assertEquals(second, results.get(1).getId());
+        assertEquals(third, results.get(2).getId());
+        assertEquals(fourth, results.get(3).getId());
     }
 
 
@@ -226,7 +246,7 @@ class TripServiceTest extends ServiceTestBase {
         int n = 10;
 
         for (int i = 0; i < n; i++) {
-            persistDefaultTrip();
+            persistTrip();
         }
 
         int count = tripService.getAllTrips().size();

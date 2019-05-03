@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -70,12 +71,13 @@ public class TripService {
         return query.getResultList();
     }
 
-    public List<Trip> getTripsByLocatioNameAndTitleQuery(String locationName, String titleQuery) {
+    public List<Trip> getSearchResults(String locationName, String titleQuery) {
 
         List<Trip> byLocation = getTripsByLocationName(locationName);
         List<Trip> results = byLocation.stream()
                 .filter(trip -> trip.getTitle().toLowerCase().contains(titleQuery.toLowerCase()))
                 .collect(Collectors.toList());
+        results.sort(Comparator.comparing(Trip::getCost));
 
         return results;
     }
