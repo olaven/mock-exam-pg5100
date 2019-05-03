@@ -27,7 +27,6 @@ public class ServiceTestBase {
     protected TripService tripService;
     @Autowired
     protected LocationService locationService;
-
     @Autowired
     private ResetService resetService;
 

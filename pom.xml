@@ -335,13 +335,13 @@
                     <artifactId>heroku-maven-plugin</artifactId>
                     <version>${version.heroku}</version>
                     <configuration>
-                        <appName>enterprise-exam</appName>
+                        <appName>enterprise-mock-exam</appName>
                         <includeTarget>false</includeTarget>
                         <includes>
                             <include>frontend/target/frontend-exec.jar</include>
                         </includes>
                         <processTypes>
-                            <web>java -Dserver.port=$PORT -jar target/frontend-exec.jar</web>
+                            <web>java -Dserver.port=$PORT -jar frontend/target/frontend-1.0-SNAPSHOT.jar</web>
                         </processTypes>
                     </configuration>
                 </plugin>

@@ -3,6 +3,8 @@ package kristiania.enterprise.exam.backend.services;
 import kristiania.enterprise.exam.backend.Season;
 import kristiania.enterprise.exam.backend.entity.Location;
 import kristiania.enterprise.exam.backend.entity.Trip;
+import kristiania.enterprise.exam.backend.repository.TripRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
@@ -19,6 +21,8 @@ public class TripService {
 
     @PersistenceContext
     private EntityManager entityManager;
+    @Autowired
+    private TripRepository tripRepository;
 
     @Transactional
     public Long createTrip(String title, String description, int cost, Location location, Season season, LocalDate date) {
