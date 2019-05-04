@@ -71,13 +71,6 @@
             <version>${version.junit}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <!-- for code coverage -->
-            <groupId>org.jacoco</groupId>
-            <artifactId>org.jacoco.core</artifactId>
-            <version>${version.jacoco}</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Database -->
         <dependency>
@@ -147,14 +140,6 @@
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-core</artifactId>
                 <version>${version.flyway}</version>
-            </dependency>
-
-            <dependency>
-                <!-- for code coverage -->
-                <groupId>org.jacoco</groupId>
-                <artifactId>org.jacoco.core</artifactId>
-                <version>${version.jacoco}</version>
-                <scope>test</scope>
             </dependency>
 
             <dependency>
@@ -276,6 +261,13 @@
                         <phase>package</phase>
                         <goals>
                             <goal>prepare-agent-integration</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report-aggregate</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
                         </goals>
                     </execution>
                     <execution>

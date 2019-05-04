@@ -168,8 +168,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.kohlschutter.junixsocket:junixsocket-common:2.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: net.java.dev.jna:jna-platform:4.5.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:selenium:1.10.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.jacoco:org.jacoco.core:0.7.9" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm-debug-all:5.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.197" level="project" />
   </component>
 </module>
