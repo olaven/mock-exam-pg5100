@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ShoppingCartRepository extends CrudRepository<ShoppingCart, Long> {
 
-    public ShoppingCart findByUser(UserEntity user);
+    ShoppingCart findByUser(UserEntity user);
 }

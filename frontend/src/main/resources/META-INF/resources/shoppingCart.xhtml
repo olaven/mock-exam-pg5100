@@ -1,0 +1,36 @@
+<ui:composition template="layout.xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:sec="http://www.springframework.org/security/tags" xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html"
+                xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form">
+
+    <ui:define name="title">Search</ui:define>
+    <ui:define name="content">
+
+        <sec:authenticated>
+
+            <h1>Your shopping cart:</h1>
+            <ul>
+                <ui:repeat value="#{shoppingCartController.allTrips}" var="trip">
+                    <li>
+                        <h:outputText value="#{trip.title}"/>
+                    </li>
+                </ui:repeat>
+                <h:outputText value="Total: ${shoppingCartController.total}"/>
+                <h:form>
+                    <h:commandButton
+                            value="Book all in cart"
+                            rendered="#{shoppingCartController.allTrips.size() > 0}"
+                            action="#{shoppingCartController.bookTrips()}"/>
+                </h:form>
+            </ul>
+        </sec:authenticated>
+
+        <sec:anonymous>
+            <p>You must log in</p>
+        </sec:anonymous>
+
+    </ui:define>
+
+</ui:composition>
+

@@ -30,6 +30,18 @@
                                     class="btn btn-primary"/>
                         </c:otherwise>
                     </c:choose>
+                    <c:choose>
+                        <c:when test="${shoppingCartController.contains(id)}">
+                            This trip is in your shopping cart!
+                        </c:when>
+                        <c:otherwise>
+                            <h:commandButton
+                                    id="addToShppingCarttButton"
+                                    value="Add to shoppingcart"
+                                    action="#{shoppingCartController.addToShoppingCart(id)}"
+                                    class="btn btn-primary"/>
+                        </c:otherwise>
+                    </c:choose>
                 </h:form>
 
             </div>

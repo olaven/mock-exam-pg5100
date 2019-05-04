@@ -5,13 +5,13 @@ import kristiania.enterprise.exam.backend.entity.Trip;
 import kristiania.enterprise.exam.backend.entity.UserEntity;
 import kristiania.enterprise.exam.backend.repository.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ShoppingCartService {
@@ -78,6 +78,10 @@ public class ShoppingCartService {
     public int getTotal(UserEntity user) {
 
         ShoppingCart shoppingCart = repository.findByUser(user);
+        if (shoppingCart == null) {
+            return 0;
+        }
+
         return shoppingCart.getTrips().stream()
                 .mapToInt(Trip::getCost)
                 .sum();
@@ -85,9 +89,17 @@ public class ShoppingCartService {
 
     public int getTripCount(UserEntity user) {
 
-        return repository
-                .findByUser(user)
-                .getTrips()
-                .size();
+        return getAllTrips(user).size();
+    }
+
+    public List<Trip> getAllTrips(UserEntity user) {
+
+        ShoppingCart shoppingCart = repository.findByUser(user);
+
+        if (shoppingCart == null) {
+            return new ArrayList<>();
+        }
+
+        return shoppingCart.getTrips();
     }
 }

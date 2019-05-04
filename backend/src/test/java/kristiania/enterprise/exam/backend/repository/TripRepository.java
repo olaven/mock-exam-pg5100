@@ -10,4 +10,5 @@ import java.util.List;
 public interface TripRepository extends CrudRepository<Trip, Long> {
     //TODO: replace queries
     //List<Trip> getTripByTitleContainingAndLocationNameEquals(String titleQuery, String locationName);
+    TripRepository getTripById(Long id);
 }
