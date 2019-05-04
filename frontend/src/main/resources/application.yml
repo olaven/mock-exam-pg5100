@@ -18,4 +18,6 @@ spring:
       store-type: hash_map
     security:
       sessions: ALWAYS
+flyway:
+  validate-on-migrate: false
 
