@@ -1,5 +1,6 @@
 package kristiania.enterprise.exam.frontend.selenium;
 
+import kristiania.enterprise.exam.backend.entity.ShoppingCart;
 import kristiania.enterprise.exam.frontend.selenium.po.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -203,4 +204,46 @@ public abstract class SeleniumTestBase {
         assertFalse(search.showsError());
     }
 
+    @Test
+    public void testCanDisplayShoppingCart() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+        home.goToShoppingCart();
+
+        ShoppingCartPO shoppingCart = new ShoppingCartPO(home);
+        assertTrue(shoppingCart.isOnPage());
+    }
+
+    @Test
+    public void testShoppingCartIs0Initially() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+        home.goToShoppingCart();
+
+        ShoppingCartPO shoppingCart = new ShoppingCartPO(home);
+        assertTrue(shoppingCart.displayedTotalMatches(0));
+        assertEquals(0, shoppingCart.amountOfDisplayedTrips());
+    }
+
+
+    @Test
+    public void testBookedItemsShowUpInShoppingCart() {
+
+        home = createNewUser(getUniqueId(), "given", "family", "password");
+
+        home.goToDetailsOfTrip(0);
+        TripPO trip = new TripPO(home);
+        assertTrue(trip.isOnPage());
+        trip.addToShoppingCart();
+        trip.goToHomePage();
+
+        home = new IndexPO(trip);
+        assertTrue(home.isOnPage());
+
+        home.goToShoppingCart();
+        ShoppingCartPO shoppingCart = new ShoppingCartPO(home);
+        assertTrue(shoppingCart.isOnPage());
+
+        assertEquals(1, shoppingCart.amountOfDisplayedTrips());
+    }
 }

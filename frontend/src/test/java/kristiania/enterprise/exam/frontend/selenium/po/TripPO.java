@@ -23,13 +23,24 @@ public class TripPO extends LayoutPO {
         return getText("tripDescription");
     }
 
-    public String getDisplayedCost() {
+    public int getDisplayedCost() {
 
-        return getText("tripCost");
+        String text = getText("tripCost");
+        int index = text.lastIndexOf(",-");
+        if (index > 0) {
+            text = text.substring(0, index);
+        }
+
+        return Integer.valueOf(text);
     }
 
     public void bookTrip() {
 
         clickAndWait("bookButton");
+    }
+
+    public void addToShoppingCart() {
+
+        clickAndWait("addToShppingCarttButton");
     }
 }

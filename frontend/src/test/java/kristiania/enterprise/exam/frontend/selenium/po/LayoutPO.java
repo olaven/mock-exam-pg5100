@@ -49,6 +49,11 @@ public abstract class LayoutPO extends PageObject {
                 getDriver().findElements((By.id("signupBtnId"))).isEmpty();
     }
 
+    public void goToHomePage() {
+
+        clickAndWait("goHomeButton");
+    }
+
     public void goToProfilePage() {
 
         clickAndWait("goToProfileButton");
@@ -57,6 +62,11 @@ public abstract class LayoutPO extends PageObject {
     public void goToSearchPage() {
 
         clickAndWait("goToSearchButton");
+    }
+
+    public void goToShoppingCart() {
+
+        clickAndWait("goToShoppingCart");
     }
 }
 

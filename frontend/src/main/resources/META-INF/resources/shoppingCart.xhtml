@@ -4,7 +4,7 @@
                 xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://java.sun.com/jsf/html"
                 xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form">
 
-    <ui:define name="title">Search</ui:define>
+    <ui:define name="title">Shopping cart</ui:define>
     <ui:define name="content">
 
         <sec:authenticated>
@@ -13,12 +13,13 @@
             <ul>
                 <ui:repeat value="#{shoppingCartController.allTrips}" var="trip">
                     <li>
-                        <h:outputText value="#{trip.title}"/>
+                        <h:outputText class="shoppingCartListItem" value="#{trip.title}"/>
                     </li>
                 </ui:repeat>
-                <h:outputText value="Total: ${shoppingCartController.total}"/>
+                <h:outputText id="shoppingCartTotal" value="Total: ${shoppingCartController.total}"/>
                 <h:form>
                     <h:commandButton
+                            id="bookAllButton"
                             value="Book all in cart"
                             rendered="#{shoppingCartController.allTrips.size() > 0}"
                             action="#{shoppingCartController.bookTrips()}"/>
